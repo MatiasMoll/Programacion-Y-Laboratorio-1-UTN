@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1553205417 source:d:\moll\programacion\clase01_ej00\main.c
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+
