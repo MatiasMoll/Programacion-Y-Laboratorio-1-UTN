@@ -31,7 +31,7 @@ int getInt(char *mensaje, char *mensajeError, int minimo, int maximo, int reinte
                break;
           }else
             {
-                printf("%s", mensajeError);
+                printf("\n %s", mensajeError);
             }
          }
     }
