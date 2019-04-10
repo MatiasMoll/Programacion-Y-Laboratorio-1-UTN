@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1554854519 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Clase 05/Clase06-String/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
