@@ -6,6 +6,7 @@
 
 
 int getString(char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos, char *resultado);
+int myFGets(char dondeGuardo, int tamaño, char queGuardo);
 
 int main()
 {
@@ -57,7 +58,7 @@ int getString(char* mensaje, char* mensajeError, int minimo, int maximo, int rei
         printf("%s", mensaje);
         fgets(buffer, sizeof(buffer), stdin);
         do{
-            if(strlen(buffer)>maximo)
+            if(strlen(buffer)-1>maximo)
             {
                 printf("%s", mensajeError);
                 reintentos--;
@@ -72,9 +73,10 @@ int getString(char* mensaje, char* mensajeError, int minimo, int maximo, int rei
     return retorno;
 }
 
-int getNombre (char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos)
+int myFGets(char dondeGuardo, int tamaño, char queGuardo)
 {
-    int retorno = -1;
+    fgets(dondeGuardo, tamaño, queGuardo);
+    queGuardo[strlen(queGuardo)-1]= "\0";
 
-
+    return 0;
 }

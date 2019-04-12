@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1555031159 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Clase 05/Clase07/main.c
+	<stdio.h>
+	<stdlib.h>
+	"TomarDatos.h"
+
+1555031572 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Clase 05/Clase07/TomarDatos.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Validaciones.h"
+
+1555031391 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Clase 05/Clase07/Validaciones.h
+
+1555031588 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Clase 05/Clase07/Validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"TomarDatos.h"
+
+1555031071 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Clase 05/Clase07/TomarDatos.h
+
