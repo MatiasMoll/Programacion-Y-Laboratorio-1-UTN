@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1555162805 source:/home/alumno/Entregas/Moll/ClaseRepaso/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1555162599 source:/home/alumno/Entregas/Moll/ClaseRepaso/Validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1555168231 source:d:\moll\programacion-y-laboratorio-1-utn\claserepaso\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1555163253 source:d:\moll\programacion-y-laboratorio-1-utn\claserepaso\get.c
+
+1555163328 source:d:\moll\programacion-y-laboratorio-1-utn\claserepaso\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
