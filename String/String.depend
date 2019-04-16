@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1555432468 source:c:\users\go up\downloads\doc\doc\string\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Validaciones.h"
+	"Get.h"
+
+1555433681 source:c:\users\go up\downloads\doc\doc\string\get.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Validaciones.h"
+
+1555432129 c:\users\go up\downloads\doc\doc\string\validaciones.h
+
+1555432426 c:\users\go up\downloads\doc\doc\string\get.h
+
+1555433349 source:c:\users\go up\downloads\doc\doc\string\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
