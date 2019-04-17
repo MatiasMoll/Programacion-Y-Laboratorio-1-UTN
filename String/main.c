@@ -13,6 +13,7 @@ int lugarDisponible(char array[][MAX_CARACTER_NOMBRE], int maximoArray,int* posi
 int mostrarArray(char array[][MAX_CARACTER_NOMBRE], int maximoArray);
 int nombreDuplicado(char array[][MAX_CARACTER_NOMBRE], char* nombre,int maximoArray, int* posicionNombreRepetido);
 int cargarNombre(char* msg, char* msgError, int minimo, int maximo, int reintentos,char array[][MAX_CARACTER_NOMBRE]);
+int borrarNombre(char* nombreABorrar, char array[][MAX_CARACTER_NOMBRE], int maximoArray);
 
 int main()
 {
@@ -26,6 +27,7 @@ int main()
    strncpy(nombres[0],"Matias",MAX_CARACTER_NOMBRE);
    strncpy(nombres[1],"Noelia",MAX_CARACTER_NOMBRE);
    cargarNombre("Ingrese El nombre", "No se ha podido cargar el nombre", 4, 10,1,nombres);
+   borrarNombre(char* nombreABorrar, char array[][MAX_CARACTER_NOMBRE], int maximoArray)
 
 
 
@@ -120,6 +122,23 @@ int cargarNombre(char* msg, char* msgError, int minimo, int maximo, int reintent
     }
 
     return retorno;
+}
+
+int borrarNombre(char* nombreABorrar, char array[][MAX_CARACTER_NOMBRE], int maximoArray)
+{
+    int retorno = -1;
+    int posicionRepetida = -1;
+    for(int i=0;i<maximoArray;i++)
+    {
+        nombreDuplicado(array,nombreABorrar,MAX_CARACTER_NOMBRE,posicionRepetida);
+        if(posicionRepetida != -1)
+        {
+            strcpy(array[posicionRepetida], "");
+        }else
+            {
+                printf("El Nombre no se ha encontrado");
+            }
+    }
 
 }
 
