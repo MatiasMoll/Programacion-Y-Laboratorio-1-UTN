@@ -15,8 +15,9 @@ int GET_String(char* msg, char* msgError, int minimo, int maximo, int reintentos
             fgets(buffer,sizeof(buffer)-1, stdin);
             if(strlen(buffer)-1<=maximo && strlen(buffer)-1>=minimo)
             {
-               strncpy(resultado,buffer,maximo);
-               break;
+                strcpy(&buffer[strlen(buffer)-1],"\0");
+                strncpy(resultado,buffer,maximo);
+                break;
             }else
                 {
                    printf("%s",msgError);
@@ -38,7 +39,7 @@ int GET_Name(char* msg, char* msgError, int minimo, int maximo, int reintentos, 
         {
             if(VAL_Name(buffer))
             {
-                printf("%s", buffer);
+                strncpy(resultado,buffer,maximo);
                 retorno  = 0;
             }else
                 {

@@ -43,3 +43,25 @@
 	<stdlib.h>
 	<string.h>
 
+1555784823 source:c:\users\m&n\desktop\mati uni\programacion i\programacion-y-laboratorio-1-utn\string\get.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Validaciones.h"
+
+1555778276 c:\users\m&n\desktop\mati uni\programacion i\programacion-y-laboratorio-1-utn\string\validaciones.h
+
+1555781715 source:c:\users\m&n\desktop\mati uni\programacion i\programacion-y-laboratorio-1-utn\string\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1555792505 source:c:\users\m&n\desktop\mati uni\programacion i\programacion-y-laboratorio-1-utn\string\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Validaciones.h"
+	"Get.h"
+
+1555778276 c:\users\m&n\desktop\mati uni\programacion i\programacion-y-laboratorio-1-utn\string\get.h
+

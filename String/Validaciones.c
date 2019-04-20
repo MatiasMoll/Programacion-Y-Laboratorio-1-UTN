@@ -8,9 +8,9 @@ int VAL_Name(char* cadena)
 {
     int i;
     int retorno = TRUE;
-    for(i=0;i<strlen(cadena);i++)
+    for(i=0;i<strlen(cadena)-1;i++)
     {
-        if((cadena[i]<'a' || cadena[i]>'z') && (cadena[i]<'A' && cadena[i]>'Z'))
+        if((cadena[i]<'a' || cadena[i]>'z') && (cadena[i]<'A' || cadena[i]>'Z'))
         {
             retorno = FALSE;
             break;

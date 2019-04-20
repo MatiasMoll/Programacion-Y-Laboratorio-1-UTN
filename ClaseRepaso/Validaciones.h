@@ -1,2 +1,1 @@
-int VAL_dni(char* cadena);
-
+int VAL_Edad(char* cadena, int minimo, int maximo);
