@@ -20,7 +20,6 @@ int main()
     char nombres[CANTIDAD_EMPLEADOS][50];
     //int posicionRepetida;
     vaciarArray(nombres,CANTIDAD_EMPLEADOS);
-    mostrarArray(nombres,CANTIDAD_EMPLEADOS);
     strncpy(nombres[0],"Gonzalo",MAX_CARACTER_NOMBRE);
     strncpy(nombres[1],"Alberto",MAX_CARACTER_NOMBRE);
     strncpy(nombres[2],"Juan",MAX_CARACTER_NOMBRE);
@@ -130,7 +129,7 @@ int borrarNombre (char* msg, char* msgError, int minimo, int maximo, int reinten
         nombreDuplicado(array,buffer,CANTIDAD_EMPLEADOS,&posicionRepetida);
         if(posicionRepetida != -1)
         {
-            strcpy(array,"");
+            strcpy(array[posicionRepetida],"");
             printf("El nombre %s se ha eliminado correctamente.", buffer);
             retorno = 0;
         }else

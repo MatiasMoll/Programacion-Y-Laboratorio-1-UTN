@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1555023803 source:/home/profesor/Ernesto/LABO12019/Clase7/Clase7/main.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+
+1555022033 source:/home/profesor/Ernesto/LABO12019/Clase7/Clase7/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1555021580 /home/profesor/Ernesto/LABO12019/Clase7/Clase7/utn.h
+
+1556055979 source:/home/alumno/Clase7_en_clase (1)/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1556055979 /home/alumno/Clase7_en_clase (1)/utn.h
+

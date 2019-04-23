@@ -21,24 +21,24 @@
 	<stdlib.h>
 	<string.h>
 
-1555453261 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Programacion-Y-Laboratorio-1-UTN/String/Get.c
+1556055827 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Programacion-Y-Laboratorio-1-UTN/String/Get.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Validaciones.h"
 
-1555452365 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Programacion-Y-Laboratorio-1-UTN/String/Validaciones.h
+1556054669 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Programacion-Y-Laboratorio-1-UTN/String/Validaciones.h
 
-1555461505 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Programacion-Y-Laboratorio-1-UTN/String/main.c
+1556055870 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Programacion-Y-Laboratorio-1-UTN/String/main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Validaciones.h"
 	"Get.h"
 
-1555452365 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Programacion-Y-Laboratorio-1-UTN/String/Get.h
+1556054669 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Programacion-Y-Laboratorio-1-UTN/String/Get.h
 
-1555452365 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Programacion-Y-Laboratorio-1-UTN/String/Validaciones.c
+1556055827 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Programacion-Y-Laboratorio-1-UTN/String/Validaciones.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
