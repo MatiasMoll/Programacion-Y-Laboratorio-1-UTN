@@ -2,57 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 #include "utn.h"
-
+#include "Empleado.h"
 #define LEN_LISTA    100
-
-
-int buscarLibre(char lista[][20],
-                int len,
-                int* pIndex)
-{
-    int i;
-    int ret=-1;
-    for(i=0; i<len ; i++)
-    {
-        if(lista[i][0]=='\0')
-        {
-            *pIndex = i;
-            ret=0;
-            break;
-        }
-    }
-    return ret;
-
-}
-
-
-int buscarNombre(char* pNombre,
-                 char lista[][20],
-                 int len,
-                 int* pIndex
-)
-{
-    int i;
-    int ret=-1;
-    for(i=0; i<len; i++)
-    {
-        if(strcmp(pNombre,lista[i])==0)
-        {
-            *pIndex = i;
-            ret=0;
-            break;
-        }
-    }
-    return ret;
-
-
-}
-
 
 int main()
 {
 
-    int opcion;
+   /* int opcion;
     char nombres[LEN_LISTA][20];
     int posAeliminar;
     int i,posLibre;
@@ -118,8 +74,22 @@ int main()
             }
         }
 
+    }*/
+    int posicionRepetido = -1;
+    Empleado prueba = {1,0, "Matias"};
+    printf(prueba);
+    /*Empleado arrayEmpleados[5];
+    strcpy(arrayEmpleados[0].nombre,"Cintia");
+    strcpy(arrayEmpleados[1].nombre,"Matias");
+    strcpy(arrayEmpleados[2].nombre,"Roberto");
+    strcpy(arrayEmpleados[3].nombre,"Carlos");
+    strcpy(arrayEmpleados[4].nombre,"Juan");
+    for(int i=0;i<5;i++)
+    {
+        printf("\n%s",arrayEmpleados[i].nombre);
     }
-
+    EMP_buscarNombre(arrayEmpleados, 5,"Cintia",&posicionRepetido);
+    printf("\n%d", posicionRepetido);*/
 
     return 0;
 }

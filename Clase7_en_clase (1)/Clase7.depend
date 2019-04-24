@@ -20,3 +20,27 @@
 
 1556055979 /home/alumno/Clase7_en_clase (1)/utn.h
 
+1556055979 source:/home/alumno/MatiasMoll/Programacion-y-Laboratorio-1-UTN/Clase7_en_clase (1)/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1556055979 /home/alumno/MatiasMoll/Programacion-y-Laboratorio-1-UTN/Clase7_en_clase (1)/utn.h
+
+1556066096 source:/home/alumno/MatiasMoll/Programacion-y-Laboratorio-1-UTN/Clase7_en_clase (1)/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+	"Empleado.h"
+
+1556066072 /home/alumno/MatiasMoll/Programacion-y-Laboratorio-1-UTN/Clase7_en_clase (1)/Empleado.h
+
+1556066059 source:/home/alumno/MatiasMoll/Programacion-y-Laboratorio-1-UTN/Clase7_en_clase (1)/Empleado.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+	"Empleado.h"
+
