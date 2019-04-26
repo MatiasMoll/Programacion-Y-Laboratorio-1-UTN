@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1556237585 source:/home/alumno/sosa/programacion_1_laboratorio_1/Clase_06/ejercicio de clase/parcial1/Get.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Validaciones.h"
+
+1556228325 /home/alumno/sosa/programacion_1_laboratorio_1/Clase_06/ejercicio de clase/parcial1/Validaciones.h
+
+1556239268 source:/home/alumno/sosa/programacion_1_laboratorio_1/Clase_06/ejercicio de clase/parcial1/pantalla.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"pantalla.h"
+	"Validaciones.h"
+	"Get.h"
+
+1556237116 /home/alumno/sosa/programacion_1_laboratorio_1/Clase_06/ejercicio de clase/parcial1/pantalla.h
+
+1556228325 source:/home/alumno/sosa/programacion_1_laboratorio_1/Clase_06/ejercicio de clase/parcial1/Validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1556238232 source:/home/alumno/sosa/programacion_1_laboratorio_1/Clase_06/ejercicio de clase/parcial1/main.c
+	<stdio.h>
+	<stdlib.h>
+	"pantalla.h"
+
+1556228325 /home/alumno/sosa/programacion_1_laboratorio_1/Clase_06/ejercicio de clase/parcial1/Get.h
+
