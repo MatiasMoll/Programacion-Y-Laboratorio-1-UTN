@@ -65,3 +65,30 @@
 
 1555778276 c:\users\m&n\desktop\mati uni\programacion i\programacion-y-laboratorio-1-utn\string\get.h
 
+1556409610 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\string\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Validaciones.h"
+	"Get.h"
+
+1556763110 c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\string\validaciones.h
+
+1556763110 c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\string\get.h
+
+1556835569 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\string\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1556763110 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\string\get.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Validaciones.h"
+
+1556251374 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\string\get.h
+
+1556251374 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\string\validaciones.h
+

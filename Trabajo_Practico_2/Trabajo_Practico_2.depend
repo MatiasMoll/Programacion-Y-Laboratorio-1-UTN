@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1556763110 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\get.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Validaciones.h"
+
+1556763110 c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\validaciones.h
+
+1556840830 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Validaciones.h"
+	"Get.h"
+	<string.h>
+	"ABM.h"
+
+1556836422 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1556840752 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\abm.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ABM.h"
+	"Validaciones.h"
+	"Get.h"
+
+1556840803 c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\abm.h
+
+1556763110 c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\get.h
+
