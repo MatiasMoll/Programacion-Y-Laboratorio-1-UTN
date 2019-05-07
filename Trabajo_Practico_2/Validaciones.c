@@ -20,10 +20,21 @@ int VAL_Name(char* cadena)
     return retorno;
 }
 
-int VAL_Int(char* cadena)
+int VAL_Int(char* cadena, int minimo, int maximo)
 {
   int retorno = 0;
-
+  int aux;
+  if(cadena!= NULL && minimo<=maximo)
+  {
+        if(atoi(cadena)!=0)
+        {
+            aux = atoi(cadena);
+            if(aux <=maximo && aux>=minimo)
+            {
+                retorno = 1;
+            }
+        }
+  }
   return retorno;
 }
 

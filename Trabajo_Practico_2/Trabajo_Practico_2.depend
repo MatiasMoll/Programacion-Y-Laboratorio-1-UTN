@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1556763110 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\get.c
+1557255484 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\get.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Validaciones.h"
 
-1556763110 c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\validaciones.h
+1557252799 c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\validaciones.h
 
-1557186685 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\main.c
+1557255660 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\main.c
 	<stdio.h>
 	<stdlib.h>
 	"Validaciones.h"
@@ -15,13 +15,13 @@
 	<string.h>
 	"ABM.h"
 
-1556836422 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\validaciones.c
+1557253268 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\validaciones.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<ctype.h>
 
-1557186635 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\abm.c
+1557255881 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\abm.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -29,7 +29,7 @@
 	"Validaciones.h"
 	"Get.h"
 
-1557186635 c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\abm.h
+1557255660 c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\abm.h
 
 1556763110 c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\get.h
 
