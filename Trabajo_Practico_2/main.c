@@ -8,10 +8,16 @@
 
 int main()
 {
-    char* nombre[50];
-    char* apellido[50];
-    Empleado empleados[1000];
-    GET_Name("Ingrese nombre: ", "Error",2,15,2,nombre);
-    GET_Name("Ingrese apellido: ","Error",2,10,2,apellido);
-    ABM_addEmployee(empleados,LIMITE, nombre, apellido, 12500,7, 1);
+    Empleado empleados[4];
+
+    strcpy(empleados[0].apellido,"Carlos");
+    strcpy(empleados[1].apellido,"Alberto");
+    strcpy(empleados[2].apellido,"Zanoni");
+    strcpy(empleados[3].apellido,"Humberto");
+    ABM_printEmployees(empleados, 3);
+    ordenarMayorAMenor(empleados,3);
+    ABM_printEmployees(empleados, 3);
+    ordenarMenorAMayor(empleados,3);
+    ABM_printEmployees(empleados,3);
+    return 0;
 }
