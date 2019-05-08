@@ -226,35 +226,34 @@ int ABM_sumaYPromedioSalarios(Empleado* arrayEmpleado, int limite, int* promedio
     }
     return retorno;
 }
-
 int ABM_ModificarEmpleado(Empleado* arrayEmpleado, int limite, int id)
 {
-    int vacio = -1;
+    int idEncontrado = -1;
     int retorno = -1;
-    vacio=ABM_buscarPorId(arrayEmpleado, limite,id);
-    if(vacio != -1)
+    if(arrayEmpleado != NULL && limite > 0 && id >=0)
     {
-        if(!GET_Name("\nIngrese Nombre del Empleado: ","\nNombre Invalido",2,MAX_CARACTER,2,nombre)&&
-                !GET_Name("\nIngrese Apellido del Empleado: ","\nApellido Invalido",2,MAX_CARACTER,2,apellido)&&
-                !GET_Int("\nIngrese el sector: ","\nSector Invalido", 1,6,2,&sector))
+        idEncontrado=ABM_buscarPorId(arrayEmpleado, limite,id);
+        if(idEncontrado != -1)
         {
-            strncpy(arrayEmpleado[vacio].nombre,nombre,51);
-            strncpy(arrayEmpleado[vacio].apellido,lastName,51);
-            arrayEmpleado[vacio].salario = salario;
-            arrayEmpleado[vacio].sector = sector;
-            arrayEmpleado[lugarVacio].id = id;
-            arrayEmpleado[lugarVacio].isEmpty = 0;
-            printf("El Empleado se ha modificado correctamente! ");
-            id++;
+            if(!GET_Name("\nIngrese Nombre del Empleado: ","\nNombre Invalido",2,MAX_CARACTER,2,arrayEmpleado[idEncontrado].nombre)&&
+                    !GET_Name("\nIngrese Apellido del Empleado: ","\nApellido Invalido",2,MAX_CARACTER,2,arrayEmpleado[idEncontrado].apellido)&&
+                    !GET_Int("\nIngrese el sector: ","\nSector Invalido", 1,6,2,arrayEmpleado[idEncontrado].sector))
+            {
+                //arrayEmpleado[idEcontrado].salario = salario;
+                arrayEmpleado[idEncontrado].id = id;
+                arrayEmpleado[idEncontrado].isEmpty = 0;
+                printf("El Empleado se ha modificado correctamente! ");
+                id++;
+                retorno = 0;
+            }
+        }
+        else
+        {
+            printf("Id no encontrado");
         }
     }
-    else
-    {
-        printf("Id no encontrado");
-    }
-
+    return retorno;
 }
-
 void ABM_menu(int* opcion)
 {
     printf("\n------MENU ABM------");
@@ -267,9 +266,11 @@ void ABM_operaciones(Empleado* arrayEmpleados,int limite)
     char nombre[MAX_CARACTER];
     char apellido[MAX_CARACTER];
     float salario;
+    float promedio;
     int opcionElegida;
     int sector;
     int id=0;
+    int idABorrar;
     do
     {
         ABM_menu(&opcionElegida);
@@ -288,10 +289,44 @@ void ABM_operaciones(Empleado* arrayEmpleados,int limite)
             {
                 printf("\nNo se ha podido dar de alta al empleado.\nPor favor, revise la informacion antes de ingresarla.");
             }
-
+            break;
+        case 2:
+            if(!GET_Int("Ingrese ID a Modificar","ID invalido",0,1000,2,&idABorrar)&&
+                    ABM_ModificarEmpleado(arrayEmpleados, limite,id))
+            {
+                printf("Empleado modificado exitosamente");
+            }
+            break;
+        case 3:
+            if(!GET_Int("Ingrese ID a borrar: ","ID invalido ",0,1000,2,&idABorrar))
+            {
+                if(!ABM_removeEmployee(arrayEmpleados,limite,idABorrar))
+                {
+                    printf("Id borrado Exitosamente");
+                }
+                else
+                {
+                    printf("Id no encontrado");
+                }
+            }
+            break;
+        case 4:
+            GET_Int("\n1-Ordenar de mayor a menor.\n2-Promediar salario de empleados.\n","Opcion Invalida",1,2,3,&opcionElegida);
+            switch(opcionElegida)
+            {
+            case 1:
+                ABM_sortEmployee(arrayEmpleados,limite,1);
+                ABM_printEmployees(arrayEmpleados,limite);
+                break;
+            case 2:
+                ABM_sumaYPromedioSalarios(arrayEmpleados,limite,&promedio);
+                printf("%.2f",promedio);
+                break;
+            }
             break;
         default:
             printf("Opcion incorrecta.");
+
         }
     }
     while(opcionElegida!=5);
