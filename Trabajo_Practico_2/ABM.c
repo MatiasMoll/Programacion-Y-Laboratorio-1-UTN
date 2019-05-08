@@ -204,7 +204,7 @@ int ABM_printEmployees(Empleado* arrayEmpleado, int limite)
     return retorno;
 }
 
-int ABM_sumaYPromedioSalarios(Empleado* arrayEmpleado, int limite, int* promedio)
+int ABM_sumaYPromedioSalarios(Empleado* arrayEmpleado, int limite, float* promedio)
 {
     int i;
     int retorno = -1;
@@ -237,7 +237,7 @@ int ABM_ModificarEmpleado(Empleado* arrayEmpleado, int limite, int id)
         {
             if(!GET_Name("\nIngrese Nombre del Empleado: ","\nNombre Invalido",2,MAX_CARACTER,2,arrayEmpleado[idEncontrado].nombre)&&
                     !GET_Name("\nIngrese Apellido del Empleado: ","\nApellido Invalido",2,MAX_CARACTER,2,arrayEmpleado[idEncontrado].apellido)&&
-                    !GET_Int("\nIngrese el sector: ","\nSector Invalido", 1,6,2,arrayEmpleado[idEncontrado].sector))
+                    !GET_Int("\nIngrese el sector: ","\nSector Invalido", 1,6,2,&arrayEmpleado[idEncontrado].sector))
             {
                 //arrayEmpleado[idEcontrado].salario = salario;
                 arrayEmpleado[idEncontrado].id = id;
@@ -265,7 +265,7 @@ void ABM_operaciones(Empleado* arrayEmpleados,int limite)
 {
     char nombre[MAX_CARACTER];
     char apellido[MAX_CARACTER];
-    float salario;
+    //float salario;
     float promedio;
     int opcionElegida;
     int sector;
@@ -324,6 +324,8 @@ void ABM_operaciones(Empleado* arrayEmpleados,int limite)
                 break;
             }
             break;
+            case 5:
+                break;
         default:
             printf("Opcion incorrecta.");
 
