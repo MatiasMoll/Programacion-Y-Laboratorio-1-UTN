@@ -63,6 +63,35 @@ int GET_Int(char* msg, char* msgError, int minimo, int maximo, int reintentos, i
     }
     return retorno;
 }
+int GET_Float(char* msg, char* msgError, float minimo, float maximo, int reintentos, float* resultado)
+{
+    int retorno = -1;
+    char buffer[4096];
+    if(msg != NULL && msgError != NULL && minimo<=maximo && reintentos>=0 && resultado != NULL)
+    {
+        do
+        {
+            if(GET_String(msg,msgError,1,32,reintentos,buffer)&& atof(buffer)!=0)
+            {
+                if(VAL_Float(buffer, minimo, maximo))
+                {
+                    *resultado = atof(buffer);
+                    retorno = 0;
+                    break;
+                }
+                else
+                {
+                    printf("Numero no Valido. ");
+                }
+            }else
+                {
+                    printf("%s",msgError);
+                }
+        }
+        while(reintentos--);
+    }
+    return retorno;
+}
 int GET_Name(char* msg, char* msgError, int minimo, int maximo, int reintentos, char* resultado)
 {
     int retorno = -1;

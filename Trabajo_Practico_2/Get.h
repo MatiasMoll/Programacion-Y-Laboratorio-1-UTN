@@ -1,5 +1,6 @@
 int GET_Name(char* msg, char* msgError, int minimo, int maximo, int reintentos, char* resultado);
 int GET_String(char* msg, char* msgError, int minimo, int maximo, int reintentos, char* resultado);
+int GET_Float(char* msg, char* msgError, float minimo, float maximo, int reintentos, float* resultado);
 int GET_Int(char* msg, char* msgError, int minimo, int maximo, int reintentos, int* resultado);
 int GET_Edad(char* msg, char* msgError, int minimo, int maximo, int reintentos, char* resultado);
 int GET_Direccion(char* msg, char* msgError, int minimo, int maximo, int reintentos, char* resultado);

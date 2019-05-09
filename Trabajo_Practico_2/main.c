@@ -9,7 +9,7 @@
 int main()
 {
     Empleado empleados[4];
-    int retorno = -1;
+
     strcpy(empleados[0].apellido,"Carlos");
     strcpy(empleados[1].apellido,"Alberto");
     strcpy(empleados[2].apellido,"Zanoni");
@@ -19,5 +19,5 @@ int main()
     ABM_printEmployees(empleados,4);
 
 
-    return retorno;
+    return 0;
 }
