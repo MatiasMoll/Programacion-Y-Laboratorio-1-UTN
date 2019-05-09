@@ -14,7 +14,7 @@ int GET_String(char* msg, char* msgError, int minimo, int maximo, int reintentos
         do
         {
             printf("%s", msg);
-            fgets(buffer,sizeof(buffer)-1, stdin);
+            fgets(buffer,sizeof(buffer), stdin);
             if(strlen(buffer)-1<=maximo && strlen(buffer)-1>=minimo)
             {
                 retorno = 1;
@@ -42,19 +42,24 @@ int GET_Int(char* msg, char* msgError, int minimo, int maximo, int reintentos, i
     int bufferInt;
     if(msg != NULL && msgError != NULL && minimo<=maximo && reintentos>=0&&resultado!=NULL)
     {
-        if(GET_String(msg,msgError,1,12,reintentos,buffer))
+        do
         {
-            if(VAL_Int(buffer,minimo,maximo))
+            if(GET_String(msg,msgError,1,12,reintentos,buffer))
             {
-                bufferInt = atoi(buffer);
-                *resultado = bufferInt;
-                retorno = 0;
+                if(VAL_Int(buffer,minimo,maximo))
+                {
+                    bufferInt = atoi(buffer);
+                    *resultado = bufferInt;
+                    retorno = 0;
+                    break;
+                }
+            }
+            else
+            {
+                printf(msgError);
             }
         }
-        else
-        {
-            printf(msgError);
-        }
+        while(reintentos--);
     }
     return retorno;
 }
@@ -79,7 +84,8 @@ int GET_Name(char* msg, char* msgError, int minimo, int maximo, int reintentos, 
                     printf("%s", msgError);
                 }
             }
-        }while(reintentos--);
+        }
+        while(reintentos--);
     }
     return retorno;
 }

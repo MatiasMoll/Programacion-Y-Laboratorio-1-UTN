@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1557255484 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\get.c
+1557419753 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\get.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -7,7 +7,7 @@
 
 1557252799 c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\validaciones.h
 
-1557279988 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\main.c
+1557419289 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\main.c
 	<stdio.h>
 	<stdlib.h>
 	"Validaciones.h"
@@ -21,7 +21,7 @@
 	<string.h>
 	<ctype.h>
 
-1557280847 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\abm.c
+1557420112 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\abm.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

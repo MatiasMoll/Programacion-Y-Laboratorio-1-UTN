@@ -94,7 +94,7 @@ int ABM_removeEmployee(Empleado* arrayEmpleado, int limite, int id)
         posId = ABM_buscarPorId(arrayEmpleado, limite, id);
         if(posId != -1)
         {
-            arrayEmpleado[posId].isEmpty = 1;
+            arrayEmpleado[posId].isEmpty = TRUE;
             retorno = 0;
         }
     }
@@ -197,7 +197,11 @@ int ABM_printEmployees(Empleado* arrayEmpleado, int limite)
     {
         for(i=0; i<=limite; i++)
         {
-            printEmploye(arrayEmpleado[i]);
+            if(!arrayEmpleado[i].isEmpty)
+            {
+                printEmploye(arrayEmpleado[i]);
+            }
+
         }
         retorno = 0;
     }
@@ -265,6 +269,7 @@ void ABM_operaciones(Empleado* arrayEmpleados,int limite)
 {
     char nombre[MAX_CARACTER];
     char apellido[MAX_CARACTER];
+    int flag =  0;
     //float salario;
     float promedio;
     int opcionElegida;
@@ -283,6 +288,7 @@ void ABM_operaciones(Empleado* arrayEmpleados,int limite)
                     ABM_addEmployee(arrayEmpleados,limite,nombre,apellido,125000,sector,id))
             {
                 printf("El Empleado se ha cargado correctamente! ");
+                flag = 1;
                 id++;
             }
             else
@@ -291,41 +297,65 @@ void ABM_operaciones(Empleado* arrayEmpleados,int limite)
             }
             break;
         case 2:
-            if(!GET_Int("Ingrese ID a Modificar","ID invalido",0,1000,2,&idABorrar)&&
-                    ABM_ModificarEmpleado(arrayEmpleados, limite,id))
+            if(flag)
             {
-                printf("Empleado modificado exitosamente");
+                if(!GET_Int("Ingrese ID a Modificar: ","ID invalido",0,1000,2,&idABorrar)&&
+                        ABM_ModificarEmpleado(arrayEmpleados, limite,id))
+                {
+                    printf("Empleado modificado exitosamente! ");
+                }
+
+            }
+            else
+            {
+                printf("Base de datos vacia. ");
             }
             break;
         case 3:
-            if(!GET_Int("Ingrese ID a borrar: ","ID invalido ",0,1000,2,&idABorrar))
+            if(flag)
             {
-                if(!ABM_removeEmployee(arrayEmpleados,limite,idABorrar))
+                if(!GET_Int("Ingrese ID a borrar: ","ID invalido ",0,1000,2,&idABorrar))
                 {
-                    printf("Id borrado Exitosamente");
+                    if(!ABM_removeEmployee(arrayEmpleados,limite,idABorrar))
+                    {
+                        printf("Id borrado Exitosamente");
+                    }
+                    else
+                    {
+                        printf("Id no encontrado");
+                    }
                 }
-                else
-                {
-                    printf("Id no encontrado");
-                }
+
+            }
+            else
+            {
+                printf("Base de datos vacia. ");
             }
             break;
         case 4:
-            GET_Int("\n1-Ordenar de mayor a menor.\n2-Promediar salario de empleados.\n","Opcion Invalida",1,2,3,&opcionElegida);
-            switch(opcionElegida)
+            if(flag)
             {
-            case 1:
-                ABM_sortEmployee(arrayEmpleados,limite,1);
-                ABM_printEmployees(arrayEmpleados,limite);
-                break;
-            case 2:
-                ABM_sumaYPromedioSalarios(arrayEmpleados,limite,&promedio);
-                printf("%.2f",promedio);
+                GET_Int("\n1-Ordenar de mayor a menor.\n2-Promediar salario de empleados.\n",
+                        "Opcion Invalida",1,2,3,&opcionElegida);
+                switch(opcionElegida)
+                {
+                case 1:
+                    ABM_sortEmployee(arrayEmpleados,limite,1);
+                    ABM_printEmployees(arrayEmpleados,limite);
+                    break;
+                case 2:
+                    ABM_sumaYPromedioSalarios(arrayEmpleados,limite,&promedio);
+                    printf("%.2f",promedio);
+                    break;
+                }
                 break;
             }
+            else
+            {
+                printf("Base de datos vacia.");
+            }
+        case 5:
             break;
-            case 5:
-                break;
         default:
             printf("Opcion incorrecta.");
 
