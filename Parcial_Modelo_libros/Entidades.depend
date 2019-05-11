@@ -237,3 +237,76 @@
 	"utn.h"
 	"socio.h"
 
+1557493995 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Parcial_Modelo_libros/autor.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"autor.h"
+
+1557493995 /home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Parcial_Modelo_libros/utn.h
+
+1557493995 /home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Parcial_Modelo_libros/autor.h
+
+1557493995 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Parcial_Modelo_libros/fantasma.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"fantasma.h"
+
+1557493995 /home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Parcial_Modelo_libros/fantasma.h
+
+1557493995 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Parcial_Modelo_libros/informes.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"fantasma.h"
+
+1557602106 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Parcial_Modelo_libros/libros.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"libros.h"
+
+1557600712 /home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Parcial_Modelo_libros/libros.h
+
+1557603051 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Parcial_Modelo_libros/main.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"fantasma.h"
+	"autor.h"
+	"socio.h"
+	"libros.h"
+	"prestamos.h"
+
+1557602113 /home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Parcial_Modelo_libros/socio.h
+
+1557603378 /home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Parcial_Modelo_libros/prestamos.h
+
+1557603713 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Parcial_Modelo_libros/prestamos.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"socio.h"
+	"libros.h"
+	"prestamos.h"
+
+1557606628 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Parcial_Modelo_libros/socio.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"socio.h"
+
+1557493995 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Parcial_Modelo_libros/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+

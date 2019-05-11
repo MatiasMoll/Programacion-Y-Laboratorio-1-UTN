@@ -8,12 +8,9 @@ typedef struct
     int idUnico;
     int isEmpty;
     //-----------------
-    char varString[TEXT_SIZE];
-    int varInt;
-    float varFloat;
-    char varChar;
-    char varLongString[TEXT_SIZE];
-
+    int idLibro;
+    int idSocio;
+  //  Fecha fechaPrestamo;
 }Prestamos;
 
 
@@ -21,10 +18,11 @@ typedef struct
 
 int prestamos_Inicializar(Prestamos array[], int size);                                    //cambiar prestamos
 int prestamos_buscarEmpty(Prestamos array[], int size, int* posicion);                    //cambiar prestamos
-int prestamos_buscarID(Prestamos array[], int size, int valorBuscado, int* posicion);                    //cambiar prestamos
-int prestamos_buscarInt(Prestamos array[], int size, int valorBuscado, int* posicion);                    //cambiar prestamos
+int prestamos_buscarID(Prestamos array[], int size, int valorBuscado, int* posicion);
+int prestamos_buscarIdLibro(Prestamos array[], int size, int valorBuscado, int* posicion);                       //cambiar prestamos
+int prestamos_buscarIdSocio(Prestamos array[], int size, int valorBuscado, int* posicion);                    //cambiar prestamos
 int prestamos_buscarString(Prestamos array[], int size, char* valorBuscado, int* indice);                    //cambiar prestamos
-int prestamos_alta(Prestamos array[], int size, int* contadorID);                          //cambiar prestamos
+int prestamos_alta(Prestamos array[],Socios arraySocios[],int sizeSocio, Libros arrayLibros[],int sizeLibros, int size, int* contadorID);                         //cambiar prestamos
 int prestamos_baja(Prestamos array[], int sizeArray);                                      //cambiar prestamos
 int prestamos_bajaValorRepetidoInt(Prestamos array[], int sizeArray, int valorBuscado);
 int prestamos_modificar(Prestamos array[], int sizeArray);                                //cambiar prestamos

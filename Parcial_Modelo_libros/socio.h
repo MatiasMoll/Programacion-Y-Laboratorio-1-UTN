@@ -1,19 +1,19 @@
 #ifndef SOCIO_H_INCLUDED
 #define SOCIO_H_INCLUDED
 
-#define TEXT_SIZE 20
+#define TEXT_SIZE 31
 
 typedef struct
 {
     int idUnico;
     int isEmpty;
     //-----------------
-    char varString[TEXT_SIZE];
-    int varInt;
-    float varFloat;
-    char varChar;
-    char varLongString[TEXT_SIZE];
-
+    char nombre[TEXT_SIZE];
+    char apellido[TEXT_SIZE];
+    char telefono[16];
+    char mail[31];
+    char sexo;
+    //Fecha fechaAsociado;
 }Socios;
 
 

@@ -1,19 +1,15 @@
 #ifndef LIBROS_H_INCLUDED
 #define LIBROS_H_INCLUDED
 
-#define TEXT_SIZE 20
+#define TEXT_SIZE 51
 
 typedef struct
 {
     int idUnico;
     int isEmpty;
     //-----------------
-    char varString[TEXT_SIZE];
-    int varInt;
-    float varFloat;
-    char varChar;
-    char varLongString[TEXT_SIZE];
-
+    char nombre[TEXT_SIZE];
+    int idAutor;
 }Libros;
 
 

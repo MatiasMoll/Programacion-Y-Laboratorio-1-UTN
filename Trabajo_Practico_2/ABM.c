@@ -5,6 +5,10 @@
 #include "Validaciones.h"
 #include "Get.h"
 #define SIN_EMPLEADOS "Base de datos Vacia."
+#define REINTENTOS 3
+#define MIN_SALARIO 10000
+#define MAX_SALARIO 1500000
+#define MIN_CARACTER 2
 #define MAX_CARACTER 51
 #define TRUE 1
 #define FALSE 0
@@ -52,8 +56,8 @@ int ABM_addEmployee(Empleado* arrayEmpleado,int limite, char* nombre, char* last
         ABM_lugarVacio(arrayEmpleado, limite, &lugarVacio);
         if(lugarVacio != -1)
         {
-            strncpy(arrayEmpleado[lugarVacio].nombre,nombre,51);
-            strncpy(arrayEmpleado[lugarVacio].apellido,lastName,51);
+            strncpy(arrayEmpleado[lugarVacio].nombre,nombre,MAX_CARACTER);
+            strncpy(arrayEmpleado[lugarVacio].apellido,lastName,MAX_CARACTER);
             arrayEmpleado[lugarVacio].salario = salario;
             arrayEmpleado[lugarVacio].sector = sector;
             arrayEmpleado[lugarVacio].id = id;
@@ -253,22 +257,47 @@ int ABM_ModificarEmpleado(Empleado* arrayEmpleado, int limite, int id)
 {
     int idEncontrado = -1;
     int retorno = -1;
+    int opcionMod;
     if(arrayEmpleado != NULL && limite > 0 && id >=0)
     {
-        idEncontrado=ABM_buscarPorId(arrayEmpleado, limite,id);
+        idEncontrado=ABM_buscarPorId(arrayEmpleado,limite,id);
         if(idEncontrado != -1)
         {
-            if(!GET_Name("\nIngrese Nombre del Empleado: ","\nNombre Invalido",2,MAX_CARACTER,2,arrayEmpleado[idEncontrado].nombre)&&
-                    !GET_Name("\nIngrese Apellido del Empleado: ","\nApellido Invalido",2,MAX_CARACTER,2,arrayEmpleado[idEncontrado].apellido)&&
-                    !GET_Int("\nIngrese el sector: ","\nSector Invalido", 1,6,2,&arrayEmpleado[idEncontrado].sector))
-            {
-                //arrayEmpleado[idEcontrado].salario = salario;
-                arrayEmpleado[idEncontrado].id = id;
-                arrayEmpleado[idEncontrado].isEmpty = 0;
-                printf("El Empleado se ha modificado correctamente! ");
-                id++;
-                retorno = 0;
-            }
+            do{
+                GET_Int("\n1-Modificar Nombre\n2-Modificar Apellido\n3-Modificar Sector\n4-Modificar Salario\n5-Salir\n",
+                    "Opcion Invalida",1,5,REINTENTOS ,&opcionMod);
+                switch(opcionMod)
+                {
+                    case 1:
+                        if(!GET_Name("\nIngrese el nuevo nombre: ","\nNombre Invalido",MIN_CARACTER,MAX_CARACTER,REINTENTOS
+                        ,arrayEmpleado[idEncontrado].nombre))
+                        {
+                            printf("Nombre modificado exitosamente");
+                        }
+                        break;
+                  case 2:
+                        if(!GET_Name("\nIngrese el nuevo apellido: ","\nApelldio Invalido",MIN_CARACTER,MAX_CARACTER,REINTENTOS
+                        ,arrayEmpleado[idEncontrado].apellido))
+                        {
+                            printf("Apellido modificado exitosamente");
+                        }
+                        break;
+                  case 3:
+                        if(!GET_Int("\nIngrese el nuevo sector: ","\nSector Invalido",1,4,REINTENTOS
+                        ,arrayEmpleado[idEncontrado].sector))
+                        {
+                            printf("Sector modificado exitosamente");
+                        }
+                        break;
+                   case 4:
+                        if(!GET_Float("\nIngrese el nuevo sector: ","\nSector Invalido",MIN_SALARIO,MAX_SALARIO,REINTENTOS
+                        ,arrayEmpleado[idEncontrado].sector))
+                        {
+                            printf("Salario modificado exitosamente");
+                        }
+                        break;
+                }
+            }while(opcionMod!=5);
         }
         else
         {
@@ -281,21 +310,21 @@ void ABM_menu(int* opcion)
 {
     printf("\n------MENU ABM------");
     printf("\n1-Alta Empleado\n2-Modificar Empleado\n3-Baja Empleado\n4-Informar\n5-Mostrar nomina\n6-Salir\n");
-    GET_Int("Ingrese la opcion elegida: ","Opcion Invalida! ",1,6,2,opcion);
+    GET_Int("Ingrese la opcion elegida: ","Opcion Invalida! ",1,7,2,opcion);
 }
 
 void ABM_operaciones(Empleado* arrayEmpleados,int limite)
 {
     char nombre[MAX_CARACTER];
     char apellido[MAX_CARACTER];
-    int flag =  0;
+    int flag =  1;
     float salario;
     float promedio;
     int sueldosAltos;
     int opcionElegida;
     int sector;
     int id=0;
-    int idABorrar;
+    int idABorrar=0;
     do
     {
         ABM_menu(&opcionElegida);
@@ -320,8 +349,9 @@ void ABM_operaciones(Empleado* arrayEmpleados,int limite)
         case 2:
             if(flag)
             {
-                if(!GET_Int("Ingrese ID a Modificar: ","ID invalido",0,1000,2,&idABorrar)&&
-                        ABM_ModificarEmpleado(arrayEmpleados, limite,id))
+                ABM_printEmployees(arrayEmpleados,limite);
+                if(!(GET_Int("Ingrese ID a Modificar: ","\nID invalido\n",0,1000,2,&idABorrar))&&
+                        ABM_ModificarEmpleado(arrayEmpleados,limite,idABorrar))
                 {
                     printf("Empleado modificado exitosamente! ");
                 }
@@ -339,6 +369,7 @@ void ABM_operaciones(Empleado* arrayEmpleados,int limite)
         case 3:
             if(flag)
             {
+                ABM_printEmployees(arrayEmpleados,limite);
                 if(!GET_Int("Ingrese ID a borrar: ","ID invalido ",0,1000,2,&idABorrar)&&
                         !ABM_removeEmployee(arrayEmpleados,limite,idABorrar))
                 {
@@ -349,54 +380,56 @@ void ABM_operaciones(Empleado* arrayEmpleados,int limite)
                     printf("Id no encontrado");
                 }
             }
-
-        }
-        else
-        {
-            printf("%s",SIN_EMPLEADOS);
-        }
-        break;
-    case 4:
-        if(flag)
-        {
-            GET_Int("\n1-Ordenar de mayor a menor.\n2-Promediar salario de empleados.\n",
-                    "Opcion Invalida",1,2,3,&opcionElegida);
-            switch(opcionElegida)
+            else
             {
-            case 1:
-                ABM_sortEmployee(arrayEmpleados,limite,1);
-                ABM_printEmployees(arrayEmpleados,limite);
-                break;
-            case 2:
-                ABM_sumaYPromedioSalarios(arrayEmpleados,limite,&promedio);
-                ABM_cantidadEncimaPromedio(arrayEmpleados,limite,promedio,&sueldosAltos);
-                printf("El promedio del salario es: %.2f\nLa cantidad de empleados por encima de este promedio es: %d"
-                       ,promedio,sueldosAltos);
-                break;
+                printf("%s",SIN_EMPLEADOS);
             }
             break;
-        }
-        else
-        {
-            printf("%s",SIN_EMPLEADOS);
-        }
-        break;
-    case 5:
-        if(flag)
-        {
-            ABM_printEmployees(arrayEmpleados, limite);
-        }
-        else
-        {
-            printf("%s",SIN_EMPLEADOS);
-        }
-        break;
-    case 6:
-        break;
-    default:
-        printf("Opcion incorrecta.");
+        case 4:
+            if(flag)
+            {
+                GET_Int("\n1-Ordenar de mayor a menor.\n2-Ordenar de menor a mayor\n3-Promediar salario de empleados.\n",
+                        "Opcion Invalida",1,3,3,&opcionElegida);
+                switch(opcionElegida)
+                {
+                case 1:
+                    ABM_sortEmployee(arrayEmpleados,limite,1);
+                    ABM_printEmployees(arrayEmpleados,limite);
+                    break;
+               case 2:
+                    ABM_sortEmployee(arrayEmpleados,limite,0);
+                    ABM_printEmployees(arrayEmpleados,limite);
+                    break;
+                case 3:
+                    ABM_sumaYPromedioSalarios(arrayEmpleados,limite,&promedio);
+                    ABM_cantidadEncimaPromedio(arrayEmpleados,limite,promedio,&sueldosAltos);
+                    printf("El promedio del salario es: %.2f\nLa cantidad de empleados por encima de este promedio es: %d"
+                           ,promedio,sueldosAltos);
+                    break;
+                }
+                break;
+            }
+            else
+            {
+                printf("%s",SIN_EMPLEADOS);
+            }
+            break;
+        case 5:
+            if(flag)
+            {
+                ABM_printEmployees(arrayEmpleados, limite);
+            }
+            else
+            {
+                printf("%s",SIN_EMPLEADOS);
+            }
+            break;
+        case 6:
+            break;
+        default:
+            printf("Opcion incorrecta.");
 
+        }
     }
-}
-while(opcionElegida!=6);
+    while(opcionElegida!=6);
 }

@@ -37,17 +37,15 @@ int VAL_Float(char* cadena, float minimo, float maximo)
 int VAL_Int(char* cadena, int minimo, int maximo)
 {
   int retorno = 0;
-  int aux;
+  int aux=0;
   if(cadena!= NULL && minimo<=maximo)
   {
-        if(atoi(cadena)!=0)
+        aux = atoi(cadena);
+        if(aux <=maximo && aux>=minimo)
         {
-            aux = atoi(cadena);
-            if(aux <=maximo && aux>=minimo)
-            {
-                retorno = 1;
-            }
+            retorno = 1;
         }
+
   }
   return retorno;
 }

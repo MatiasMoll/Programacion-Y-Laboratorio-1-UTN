@@ -54,7 +54,7 @@ int main()
 
     do
     {
-        utn_getUnsignedInt("\n1-Menu Autor\n2-Menu Socios\n3-Menu Prestamos\n4-Salir\nIngrese su opcion: ","\nOpcion Invalida.",1,sizeof(int),1,4,1,&primeraOpcion);
+        utn_getUnsignedInt("\n1-Menu Autor\n2-Menu Socios\n3-Menu Prestamos\n4-Menu Libros\n5-Salir\nIngrese su opcion: ","\nOpcion Invalida.",1,sizeof(int),1,5,1,&primeraOpcion);
         switch(primeraOpcion)
         {
             case 1:
@@ -126,7 +126,7 @@ int main()
                 switch(opcion)
                 {
                 case 1: //Alta
-                    prestamos_alta(arrayPrestamos,QTY_ARRAY_PRESTAMOS,&contadorIdprestamos);                   //cambiar
+                    prestamos_alta(arrayPrestamos,arraySocios,QTY_ARRAY_SOCIO,arrayLibros,QTY_ARRAY_LIBROS,QTY_ARRAY_PRESTAMOS,&contadorIdprestamos);                   //cambiar
                     break;
 
                 case 2: //Modificar
@@ -149,8 +149,38 @@ int main()
                 break;
                 }while(opcion!=6);
             break;
+            case 4:
+                do{
+                utn_getUnsignedInt("\n\n-------MENU LIBROS-------\n\n1) Alta \n2) Modificar \n3) Baja \n4) Listar \n5) Ordenar\n6)Salir\nIngrese la opcion: ",                   //cambiar
+                                   "\nError",1,sizeof(int),1,6,1,&opcion);
+                switch(opcion)
+                {
+                case 1: //Alta
+                    libros_alta(arrayLibros,QTY_ARRAY_LIBROS,&contadorIdlibros);                   //cambiar
+                    break;
+
+                case 2: //Modificar
+                    libros_modificar(arrayLibros,QTY_ARRAY_LIBROS);                   //cambiar
+                    break;
+
+                case 3: //Baja
+                    libros_baja(arrayLibros,QTY_ARRAY_LIBROS);                   //cambiar
+                    break;
+
+                case 4://Listar
+                    libros_listar(arrayLibros,QTY_ARRAY_LIBROS);                   //cambiar
+                    break;
+
+                case 5://Ordenar
+                    libros_ordenarPorDobleCriterio(arrayLibros,QTY_ARRAY_LIBROS,SORT_UP,SORT_DOWN);                   //cambiar
+                    break;
+                case 6:
+                    break;
+                }
+                }while(opcion!=6);
+            break;
         }
-        }while(primeraOpcion!=4);
+        }while(primeraOpcion!=5);
 
            /* utn_getUnsignedInt("\n\n1) Alta \n2) Modificar \n3) Baja \n4) Listar \n5) Ordenar \n\n 6) Alta autor \n7) Modificar autor \n8) Baja autor \n9) Listar autor \n10) Ordenar autor \n11) Salir\n",                   //cambiar
                                "\nError",1,sizeof(int),1,11,1,&opcion);

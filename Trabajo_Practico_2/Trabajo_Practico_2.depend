@@ -33,3 +33,37 @@
 
 1557424320 c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\trabajo_practico_2\get.h
 
+1557496868 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Trabajo_Practico_2/ABM.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ABM.h"
+	"Validaciones.h"
+	"Get.h"
+
+1557493995 /home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Trabajo_Practico_2/ABM.h
+
+1557493995 /home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Trabajo_Practico_2/Validaciones.h
+
+1557493995 /home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Trabajo_Practico_2/Get.h
+
+1557497824 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Trabajo_Practico_2/Get.c
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"Validaciones.h"
+
+1557500261 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Trabajo_Practico_2/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Validaciones.h"
+	"Get.h"
+	<string.h>
+	"ABM.h"
+
+1557498107 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/Trabajo_Practico_2/Validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+

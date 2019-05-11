@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio_ext.h>
 #include <stdlib.h>
 #include <string.h>
 #include "Validaciones.h"
@@ -9,17 +9,19 @@ int GET_String(char* msg, char* msgError, int minimo, int maximo, int reintentos
 {
     int retorno =  0;
     char buffer[4096];
-    if(msg != NULL && msgError != NULL && minimo<maximo && reintentos>=0 && resultado != NULL)
+    if(msg != NULL && msgError != NULL && minimo<=maximo && reintentos>=0 && resultado != NULL)
     {
         do
         {
             printf("%s", msg);
-            fgets(buffer,sizeof(buffer), stdin);
+            __fpurge(stdin);
+            fgets(buffer,sizeof(buffer),stdin);
+            //strcpy(buffer[strlen(buffer)-1],'\0');
             if(strlen(buffer)-1<=maximo && strlen(buffer)-1>=minimo)
             {
+
+                strncpy(resultado,buffer,maximo-1);
                 retorno = 1;
-                strcpy(&buffer[strlen(buffer)-1],"\0");
-                strncpy(resultado,buffer,maximo);
                 break;
             }
             else
@@ -39,24 +41,21 @@ int GET_Int(char* msg, char* msgError, int minimo, int maximo, int reintentos, i
 {
     int retorno = -1;
     char buffer[4096];
-    int bufferInt;
     if(msg != NULL && msgError != NULL && minimo<=maximo && reintentos>=0&&resultado!=NULL)
     {
         do
         {
-            if(GET_String(msg,msgError,1,12,reintentos,buffer))
+            if(GET_String(msg,msgError,1,12,reintentos,buffer) && VAL_Int(buffer,minimo,maximo))
             {
-                if(VAL_Int(buffer,minimo,maximo))
-                {
-                    bufferInt = atoi(buffer);
-                    *resultado = bufferInt;
-                    retorno = 0;
-                    break;
-                }
+
+                *resultado = atoi(buffer);
+                retorno = 0;
+                break;
+
             }
             else
             {
-                printf(msgError);
+                printf("%s",msgError);
             }
         }
         while(reintentos--);
@@ -83,10 +82,11 @@ int GET_Float(char* msg, char* msgError, float minimo, float maximo, int reinten
                 {
                     printf("Numero no Valido. ");
                 }
-            }else
-                {
-                    printf("%s",msgError);
-                }
+            }
+            else
+            {
+                printf("%s",msgError);
+            }
         }
         while(reintentos--);
     }
