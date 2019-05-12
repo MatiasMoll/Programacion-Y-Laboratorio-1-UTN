@@ -367,7 +367,7 @@ int socios_listar(Socios array[], int size)                      //cambiar socio
             if(array[i].isEmpty==1)
                 continue;
             else
-                printf("\n Posicion: %d\n ID: %d\n Nombre: %s\nApellido: %s\nSexo: %c\nTelefono: %s\n Mail: %s",
+                printf("\nPosicion: %d\nID: %d\nNombre: %s\nApellido: %s\nSexo: %c\nTelefono: %s\nMail: %s\n\n",
                 i, array[i].idUnico,array[i].nombre,array[i].apellido,array[i].sexo,array[i].telefono,array[i].mail);      //cambiar todos
         }
         retorno=0;

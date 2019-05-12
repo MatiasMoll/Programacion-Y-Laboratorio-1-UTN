@@ -310,3 +310,76 @@
 	<string.h>
 	"utn.h"
 
+1557618904 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\parcial_modelo_libros\autor.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"autor.h"
+
+1557618904 c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\parcial_modelo_libros\utn.h
+
+1557618904 c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\parcial_modelo_libros\autor.h
+
+1557618904 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\parcial_modelo_libros\fantasma.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"fantasma.h"
+
+1557618904 c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\parcial_modelo_libros\fantasma.h
+
+1557618904 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\parcial_modelo_libros\informes.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"fantasma.h"
+
+1557618904 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\parcial_modelo_libros\libros.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"libros.h"
+
+1557618904 c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\parcial_modelo_libros\libros.h
+
+1557619934 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\parcial_modelo_libros\main.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"fantasma.h"
+	"autor.h"
+	"socio.h"
+	"libros.h"
+	"prestamos.h"
+
+1557618904 c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\parcial_modelo_libros\socio.h
+
+1557618904 c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\parcial_modelo_libros\prestamos.h
+
+1557618904 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\parcial_modelo_libros\prestamos.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"socio.h"
+	"libros.h"
+	"prestamos.h"
+
+1557618904 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\parcial_modelo_libros\socio.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"socio.h"
+
+1557618904 source:c:\users\bangho\desktop\matias\programacion-y-laboratorio-1-utn\parcial_modelo_libros\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
