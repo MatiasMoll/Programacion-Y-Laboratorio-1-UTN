@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1557873675 source:/home/alumno/Moll/Programacion-Y-Laboratorio-1-UTN/Memoria Dinamica/Memoria Dinamica/main.c
+	<stdio.h>
+	<stdlib.h>
+

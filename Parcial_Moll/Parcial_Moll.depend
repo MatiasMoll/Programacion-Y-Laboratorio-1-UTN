@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1557868237 source:/home/alumno/Moll/Programacion-Y-Laboratorio-1-UTN/Parcial_Moll/fantasma.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"fantasma.h"
+
+1557868237 /home/alumno/Moll/Programacion-Y-Laboratorio-1-UTN/Parcial_Moll/utn.h
+
+1557868237 /home/alumno/Moll/Programacion-Y-Laboratorio-1-UTN/Parcial_Moll/fantasma.h
+
+1557868324 source:/home/alumno/Moll/Programacion-Y-Laboratorio-1-UTN/Parcial_Moll/main.c
+	<stdio.h>
+	<stdlib.h>
+
+1557868237 source:/home/alumno/Moll/Programacion-Y-Laboratorio-1-UTN/Parcial_Moll/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1557868237 source:/home/alumno/Moll/Programacion-Y-Laboratorio-1-UTN/Parcial_Moll/Get.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Validaciones.h"
+
+1557868237 /home/alumno/Moll/Programacion-Y-Laboratorio-1-UTN/Parcial_Moll/Validaciones.h
+
+1557868237 source:/home/alumno/Moll/Programacion-Y-Laboratorio-1-UTN/Parcial_Moll/Validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
