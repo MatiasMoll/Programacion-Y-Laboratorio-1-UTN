@@ -11,16 +11,16 @@
 	<stdlib.h>
 	"empleado.h"
 
-1557880308 source:/home/alumno/Moll/Programacion-Y-Laboratorio-1-UTN/memoria/empleado.c
+1557882171 source:/home/alumno/Moll/Programacion-Y-Laboratorio-1-UTN/memoria/empleado.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"empleado.h"
 	"Validaciones.h"
 
-1557881385 /home/alumno/Moll/Programacion-Y-Laboratorio-1-UTN/memoria/empleado.h
+1557882171 /home/alumno/Moll/Programacion-Y-Laboratorio-1-UTN/memoria/empleado.h
 
-1557880549 source:/home/alumno/Moll/Programacion-Y-Laboratorio-1-UTN/memoria/main.c
+1557882262 source:/home/alumno/Moll/Programacion-Y-Laboratorio-1-UTN/memoria/main.c
 	<stdio.h>
 	<stdlib.h>
 	"empleado.h"

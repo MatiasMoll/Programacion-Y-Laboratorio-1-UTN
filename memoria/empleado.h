@@ -22,7 +22,7 @@ int Emp_getNombre(Empleado* this, char* valor);
 int Emp_setEstado(Empleado* this, int estado);
 int Emp_getEstado(Empleado* this, int* valor);
 int Emp_compararNombre(Empleado* this,Empleado* this1);//-1 = this>this1 ,0=Nombres Iguales, 1=this<this1
-int Emp_alta(char* nombre, float peso, int estado, int id);
+Empleado* Emp_alta(char* nombre, float peso, int estado, int id);
 
 
 

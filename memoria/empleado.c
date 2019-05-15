@@ -118,18 +118,19 @@ int Emp_compararNombre(Empleado* this,Empleado* this1)
     return retorno;
 }
 
-int Emp_alta(char* nombre, float peso, int estado, int id)
+Empleado* Emp_alta(char* nombre, float peso, int estado, int id)
 {
+    Empleado *retorno = NULL;
     Empleado *emp = Emp_new();
     if(emp != NULL && !Emp_setNombre(emp,nombre) && !Emp_setPeso(emp,peso)
         && !Emp_setEstado(emp,estado) && !Emp_setId(emp, id))
     {
-
+        retorno = emp;
     }else
         {
             free(emp);
         }
-    return emp;
+    return retorno;
 }
 
 

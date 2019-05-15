@@ -8,8 +8,8 @@ int main()
     int ultimoElementoArrayEmpleado = 0;
     int indiceActual;
     float peso;
-    char* nombre;
-    int auxInt;
+    //char* nombre;
+    //int auxInt;
 
     indiceActual = ultimoElementoArrayEmpleado;
     pArrayEmpleado[indiceActual] =  Emp_new();
@@ -22,12 +22,10 @@ int main()
         if(!Emp_setPeso(pArrayEmpleado[indiceActual],120.5))
         {
             Emp_getPeso(pArrayEmpleado[indiceActual],&peso);
-            printf("\n El peso es %.2f",&peso);
+            printf("\n El peso es %f",&peso);
 
         }
-
     }
-
 
     return 0;
 }
