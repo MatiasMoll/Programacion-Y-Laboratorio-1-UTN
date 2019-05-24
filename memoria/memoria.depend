@@ -33,3 +33,34 @@
 
 1557880325 /home/alumno/Moll/Programacion-Y-Laboratorio-1-UTN/memoria/Validaciones.h
 
+1558646948 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/memoria/empleado.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"empleado.h"
+	"Validaciones.h"
+
+1558646948 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/memoria/empleado.h
+
+1558653938 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/memoria/Validaciones.h
+
+1558658827 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/memoria/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Persona.h"
+
+1558654221 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/memoria/Validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1558658342 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/memoria/Persona.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Persona.h"
+	"Validaciones.h"
+
+1558657451 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/memoria/Persona.h
+

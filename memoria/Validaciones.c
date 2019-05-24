@@ -9,7 +9,7 @@ int VAL_Name(char* cadena)
 {
     int i;
     int retorno = TRUE;
-    for(i=0;i<strlen(cadena)-1;i++)
+    for(i=0; i<strlen(cadena)-1; i++)
     {
         if((cadena[i]<'a' || cadena[i]>'z') && (cadena[i]<'A' || cadena[i]>'Z'))
         {
@@ -26,28 +26,28 @@ int VAL_Float(float cadena, float minimo, float maximo)
     //if(cadena != NULL)
     //{
     //aux = atof(cadena);
-      if(cadena>=minimo && cadena<=maximo)
-      {
-          retorno = 1;
-      }
+    if(cadena>=minimo && cadena<=maximo)
+    {
+        retorno = 1;
+    }
     //}
     return retorno;
 }
 
 int VAL_Int(int cadena, int minimo, int maximo)
 {
-  int retorno = 0;
-  //int aux=0;
-  //if(cadena!= NULL && minimo<=maximo)
-  //{
-        //aux = atoi(cadena);
-        if(cadena <=maximo && cadena>=minimo)
-        {
-            retorno = 1;
-        }
+    int retorno = 0;
+    //int aux=0;
+    //if(cadena!= NULL && minimo<=maximo)
+    //{
+    //aux = atoi(cadena);
+    if(cadena <=maximo && cadena>=minimo)
+    {
+        retorno = 1;
+    }
 
-  //}
-  return retorno;
+    //}
+    return retorno;
 }
 
 int VAL_Edad(char* cadena, int minimo, int maximo)
@@ -73,7 +73,7 @@ int VAL_Direccion(char* cadena)
     int i;
     if(cadena != NULL)
     {
-        for(i=0;i<=strlen(cadena)-1;i++)
+        for(i=0; i<=strlen(cadena)-1; i++)
         {
             if((cadena[i]<'a' || cadena[i]>'z')&&(cadena[i]<'A' || cadena[i]>'Z')&&(cadena[i]< '0' || cadena[i]>'9')&& isspace(cadena[i])&&cadena[i]=='°')
             {
@@ -91,6 +91,23 @@ int VAL_Cuil(char* cadena)
     if(cadena != NULL)
     {
         retorno = 0;
+    }
+    return retorno;
+}
+
+int VAL_Entero(char* cadena)
+{
+    int retorno = 0;
+    int i;
+    if(cadena != NULL)
+    {
+        for(i=0; cadena[i]!='\0'; i++)
+        {
+            if(cadena[i] >= '0' && cadena[i]<='9')
+            {
+                retorno = 1;
+            }
+        }
     }
     return retorno;
 }

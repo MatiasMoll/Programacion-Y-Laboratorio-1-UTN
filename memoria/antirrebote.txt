@@ -1,0 +1,33 @@
+#define LED 8
+#define BOTON 6
+
+int estadoBoton = 0;
+int estadoLed = 0;
+int estadoAnteriorBoton = 1;
+
+void setup()
+{
+  pinMode(LED, OUTPUT);
+  pinMode(BOTON, INPUT);    
+  Serial.begin(9600);  
+}
+void loop()
+{
+  estadoBoton = digitalRead(BOTON);
+  
+  if(estadoBoton != estadoAnteriorBoton){
+    
+  if(estadoBoton == HIGH){    
+    delay(20);
+    estadoLed = 1 - estadoLed;
+    digitalWrite(LED, estadoLed);
+    
+     if(estadoLed){
+      Serial.println("Encendido");
+    }else{
+      Serial.println("Apagado");
+    }
+  }    
+    estadoAnteriorBoton = estadoBoton;      
+  }
+}

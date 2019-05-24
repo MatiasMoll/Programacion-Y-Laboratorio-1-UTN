@@ -1,31 +1,44 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "empleado.h"
+#include "Persona.h"
 
 int main()
 {
-    Empleado *pArrayEmpleado[1000];
+    /*Persona *pArrayEmpleado[1000];
     int ultimoElementoArrayEmpleado = 0;
     int indiceActual;
-    float peso;
-    //char* nombre;
+    //float peso;
+    char nombre[50];
+    char apellido[50];
     //int auxInt;
 
     indiceActual = ultimoElementoArrayEmpleado;
-    pArrayEmpleado[indiceActual] =  Emp_new();
+    pArrayEmpleado[indiceActual] =  Persona_new();
 
 
     if(pArrayEmpleado[indiceActual] != NULL)
     {
-        ultimoElementoArrayEmpleado++;
-        printf("OK");
-        if(!Emp_setPeso(pArrayEmpleado[indiceActual],120.5))
+        if(Persona_alta("Matias","Moll",1,0)!= NULL)
         {
-            Emp_getPeso(pArrayEmpleado[indiceActual],&peso);
-            printf("\n El peso es %f",&peso);
-
+            pArrayEmpleado[indiceActual] = Persona_alta("Matias","Moll",1,0);
+            ultimoElementoArrayEmpleado++;
         }
-    }
+        Persona_getNombre(pArrayEmpleado[indiceActual],nombre);
+        Persona_getApellido(pArrayEmpleado[indiceActual], apellido);
 
+        printf("\nNombre: %s\nApellido: %s\n",nombre,apellido);
+
+    }*/
+
+    char nombre[50];
+    char apellido[50];
+    int id;
+    int estado;
+    Persona* nuevaP = Persona_altaStr("Matias","Moll","0", "true");
+    Persona_getNombre(nuevaP,nombre);
+    Persona_getApellido(nuevaP,apellido);
+    Persona_getId(nuevaP,&id);
+    Persona_getEstado(nuevaP,&estado);
+    printf("%s\n%s\n%d\n%d\n",nombre,apellido,id,estado);
     return 0;
 }
