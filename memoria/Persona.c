@@ -220,7 +220,7 @@ Persona* Persona_altaStr(char* nombre, char* apellido, char* id, char* estado)
     return retorno;
 }
 
-int llenarArrayDesdeArchivo(Persona* array[], int sizeArray,char* nombreArchivo,char* parseo)
+int llenarArrayDesdeArchivo(Persona* array[], int sizeArray,char* nombreArchivo,char* parseo, int* idMaximo)
 {
     int retorno = -1;
     int i=0;
@@ -230,6 +230,7 @@ int llenarArrayDesdeArchivo(Persona* array[], int sizeArray,char* nombreArchivo,
     char auxId[50];
     char auxEstado[50];
     char basura[50];
+    //int idMax = 0;
     FILE* pAux;
     pAux = fopen(nombreArchivo, "r");
     if(pAux != NULL)
@@ -242,6 +243,11 @@ int llenarArrayDesdeArchivo(Persona* array[], int sizeArray,char* nombreArchivo,
             {
                 array[i] = auxPersona;
                 i++;
+                if(*idMaximo<atoi(auxId))
+                {
+                    *idMaximo = atoi(auxId);
+                }
+
             }
          }
          retorno = 0;

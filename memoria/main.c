@@ -45,9 +45,9 @@ int main()
     char apellido[50];
     int id;
     char estado[50];
-    //int estado;
+    int maxId=0;
 
-    llenarArrayDesdeArchivo(arrayPersona,TAMANIO_LISTA,"datos.csv","%[^;];%[^;];%[^;];%[^;];%[^\n]\n");
+    llenarArrayDesdeArchivo(arrayPersona,TAMANIO_LISTA,"datos.csv","%[^;];%[^;];%[^;];%[^;];%[^\n]\n",&maxId);
     printf("| ID | NOMBRE | APELLIDO | ESTADO |\n-----------------------------------");
     for(int i=0;i<TAMANIO_LISTA;i++)
     {
@@ -59,6 +59,7 @@ int main()
         printf("\n| %d | %s | %s | %s |\n",id,nombre,apellido,estado);
     }
     printf("------------------------------------");
+    printf("%d",maxId);
 
 
     return 0;

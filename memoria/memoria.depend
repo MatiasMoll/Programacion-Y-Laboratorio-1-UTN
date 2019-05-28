@@ -44,7 +44,7 @@
 
 1558653938 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/memoria/Validaciones.h
 
-1559084738 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/memoria/main.c
+1559085582 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/memoria/main.c
 	<stdio.h>
 	<stdlib.h>
 	"Persona.h"
@@ -55,12 +55,12 @@
 	<string.h>
 	<ctype.h>
 
-1559084722 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/memoria/Persona.c
+1559085526 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/memoria/Persona.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Persona.h"
 	"Validaciones.h"
 
-1559084541 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/memoria/Persona.h
+1559085526 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/memoria/Persona.h
 
