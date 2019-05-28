@@ -168,13 +168,15 @@ int Persona_getEstadoStr(Persona* this, char *estado)
     if(this != NULL && estado != NULL)
     {
       Persona_getEstado(this,&buffer);
-      if(!buffer)
+      switch(buffer)
       {
-        sprintf(estado,"false");
-      }else if(buffer == 1)
-        {
-            sprintf(estado, "true");
-        }
+        case 0:
+            sprintf(estado,"false");
+            break;
+        case 1:
+            sprintf(estado,"true");
+            break;
+      }
       retorno = 1;
     }
     return retorno;
@@ -185,10 +187,10 @@ int Persona_setEstadoStr(Persona* this, char* estado)
     int retorno = 0;
     if(this != NULL && estado != NULL)
     {
-        if(!strcmp(estado,"false"))
+        if(strcmp(estado,"false")==0)
         {
             Persona_setEstado(this,0);
-        }else if(!strcmp(estado,"true"))
+        }else if(strcmp(estado,"true")==0)
             {
                Persona_setEstado(this,1);
             }
@@ -203,8 +205,8 @@ Persona* Persona_altaStr(char* nombre, char* apellido, char* id, char* estado)
     Persona* nuevaPersona = Persona_new();
     if(nuevaPersona != NULL && nombre!=NULL && apellido != NULL && estado != NULL && id != NULL)
     {
-        if(!Persona_setNombre(nuevaPersona,nombre) && !Persona_setApellido(nuevaPersona,apellido) &&
-            !Persona_setIdStr(nuevaPersona,id) && Persona_setEstadoStr(nuevaPersona,estado))
+        if((!Persona_setNombre(nuevaPersona,nombre)) && (!Persona_setApellido(nuevaPersona,apellido)) &&
+            (!Persona_setIdStr(nuevaPersona,id)) && (Persona_setEstadoStr(nuevaPersona,estado)))
         {
             retorno = nuevaPersona;
         }else
@@ -218,3 +220,32 @@ Persona* Persona_altaStr(char* nombre, char* apellido, char* id, char* estado)
     return retorno;
 }
 
+int llenarArrayDesdeArchivo(Persona* array[], int sizeArray,char* nombreArchivo,char* parseo)
+{
+    int retorno = -1;
+    int i=0;
+    Persona* auxPersona;
+    char auxNombre[50];
+    char auxApellido[50];
+    char auxId[50];
+    char auxEstado[50];
+    char basura[50];
+    FILE* pAux;
+    pAux = fopen(nombreArchivo, "r");
+    if(pAux != NULL)
+    {
+        while(!feof(pAux) && i<sizeArray)
+        {
+            fscanf(pAux,parseo,auxId,auxNombre,auxApellido,auxEstado,basura);
+            auxPersona = Persona_altaStr(auxNombre,auxApellido,auxId,auxEstado);
+            if(auxPersona != NULL)
+            {
+                array[i] = auxPersona;
+                i++;
+            }
+         }
+         retorno = 0;
+    }
+    fclose(pAux);
+    return retorno;
+}

@@ -1,4 +1,4 @@
-id;first_name;last_name;is_empty; salary
+id;first_name;last_name;is_empty;salary
 1;Eric;Knight;false;500
 2;Annie;Castillo;true;501
 3;Johnny;Dunn;false;502

@@ -30,3 +30,4 @@ int Persona_getEstadoStr(Persona* this, char *estado);
 int Persona_setEstadoStr(Persona* this, char* estado);
 Persona* Persona_altaStr(char* nombre, char* apellido, char* id, char* estado);
 //*************************************************************************************************************
+int llenarArrayDesdeArchivo(Persona* array[], int sizeArray,char* nombreArchivo,char* parseo);

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Persona.h"
-
+#define TAMANIO_LISTA 20
 int main()
 {
     /*Persona *pArrayEmpleado[1000];
@@ -30,7 +30,7 @@ int main()
 
     }*/
 
-    char nombre[50];
+    /*char nombre[50];
     char apellido[50];
     int id;
     int estado;
@@ -39,6 +39,27 @@ int main()
     Persona_getApellido(nuevaP,apellido);
     Persona_getId(nuevaP,&id);
     Persona_getEstado(nuevaP,&estado);
-    printf("%s\n%s\n%d\n%d\n",nombre,apellido,id,estado);
+    printf("%s\n%s\n%d\n%d\n",nombre,apellido,id,estado);*/
+    Persona* arrayPersona[TAMANIO_LISTA];
+    char nombre[50];
+    char apellido[50];
+    int id;
+    char estado[50];
+    //int estado;
+
+    llenarArrayDesdeArchivo(arrayPersona,TAMANIO_LISTA,"datos.csv","%[^;];%[^;];%[^;];%[^;];%[^\n]\n");
+    printf("| ID | NOMBRE | APELLIDO | ESTADO |\n-----------------------------------");
+    for(int i=0;i<TAMANIO_LISTA;i++)
+    {
+        Persona_getNombre(arrayPersona[i],nombre);
+        Persona_getApellido(arrayPersona[i],apellido);
+        Persona_getId(arrayPersona[i],&id);
+        Persona_getEstadoStr(arrayPersona[i],estado);
+
+        printf("\n| %d | %s | %s | %s |\n",id,nombre,apellido,estado);
+    }
+    printf("------------------------------------");
+
+
     return 0;
 }
