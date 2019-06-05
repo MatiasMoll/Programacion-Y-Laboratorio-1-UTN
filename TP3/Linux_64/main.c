@@ -49,7 +49,8 @@ int main()
             employee_getNombre(pAuxEmp,nombreA);
             employee_getHorasTrabajadas(pAuxEmp,&horasA);
             employee_getSueldo(pAuxEmp,&sueldoA);
-            printf("Id: %d /// Nombre: %s /// Horas Trabajadas: %d /// Sueldo: %d\n",idA,nombreA,horasA,sueldoA);
+
+            printf("Id: %d Nombre: %s Horas Trabajadas: %d Sueldo: %d\n",idA,nombreA,horasA,sueldoA);
         }
     }
     return 0;
