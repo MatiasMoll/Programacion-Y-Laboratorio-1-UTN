@@ -106,3 +106,50 @@
 
 1533133022 /home/alumno/MatiasMoll/TP3/Linux_64/parser.h
 
+1559693132 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+
+1559685563 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/LinkedList.h
+
+1559689582 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Employee.h
+
+1533133022 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/parser.h
+
+1559696384 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Employee.h"
+	"Get.h"
+	"Validaciones.h"
+
+1558646948 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Get.h
+
+1558653938 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Validaciones.h
+
+1559696452 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"parser.h"
+
+1533133022 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Controller.h
+
+1559696656 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1558654221 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+

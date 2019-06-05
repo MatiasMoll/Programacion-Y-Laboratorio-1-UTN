@@ -13,7 +13,6 @@
 int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
 {
     int retorno = -1;
-    int cantLeido;
     char bufferId[4096];
     char bufferNombre[4096];
     char bufferHorasTrabajadas[4096];
