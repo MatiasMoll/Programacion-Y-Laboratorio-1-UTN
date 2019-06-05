@@ -230,7 +230,6 @@ int llenarArrayDesdeArchivo(Persona* array[], int sizeArray,char* nombreArchivo,
     char auxId[50];
     char auxEstado[50];
     char basura[50];
-    //int idMax = 0;
     FILE* pAux;
     pAux = fopen(nombreArchivo, "r");
     if(pAux != NULL)
@@ -247,7 +246,6 @@ int llenarArrayDesdeArchivo(Persona* array[], int sizeArray,char* nombreArchivo,
                 {
                     *idMaximo = atoi(auxId);
                 }
-
             }
          }
          retorno = 0;

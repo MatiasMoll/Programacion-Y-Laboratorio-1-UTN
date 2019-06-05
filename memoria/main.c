@@ -59,8 +59,5 @@ int main()
         printf("\n| %d | %s | %s | %s |\n",id,nombre,apellido,estado);
     }
     printf("------------------------------------");
-    printf("%d",maxId);
-
-
     return 0;
 }
