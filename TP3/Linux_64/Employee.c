@@ -13,19 +13,41 @@ Employee* employee_new()
 }
 Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajadasStr, char* sueldoStr)
 {
+    Employee* retorno = NULL;
     Employee* pEmployee = employee_new();
     if(idStr != NULL && nombreStr != NULL && horasTrabajadasStr != NULL && sueldoStr != NULL && pEmployee != NULL)
     {
         if(VAL_Entero(idStr) && VAL_Entero(horasTrabajadasStr) && VAL_Entero(sueldoStr))
         {
-            if(employee_setId(pEmployee,atoi(idStr))&&employee_setNombre(pEmployee,nombreStr)&&employee_setHorasTrabajadas(pEmployee,atoi(horasTrabajadasStr))&&
+            if(employee_setId(pEmployee,atoi(idStr))||employee_setNombre(pEmployee,nombreStr)||employee_setHorasTrabajadas(pEmployee,atoi(horasTrabajadasStr))||
             employee_setSueldo(pEmployee,atoi(sueldoStr)))
             {
-                pEmployee = NULL;
-            }
+                employee_delete(pEmployee);
+            }else
+                {
+                    retorno = pEmployee;
+                }
         }
     }
-    return pEmployee;
+    return retorno;
+}
+Employee* employee_newFileBinario(Employee empleado)
+{
+    Employee* retorno = NULL;
+    Employee* pAux = employee_new();
+    if(pAux != NULL)
+    {
+        if(employee_setId(pAux,empleado.id)||employee_setNombre(pAux,empleado.nombre)
+            ||employee_setHorasTrabajadas(pAux,empleado.horasTrabajadas)||employee_setSueldo(pAux,empleado.sueldo))
+        {
+            employee_delete(pAux);
+            printf("%d,%s,%d,%d\n",empleado.id,empleado.nombre,empleado.horasTrabajadas,empleado.sueldo);
+        }else
+            {
+                retorno = pAux;
+            }
+    }
+    return retorno;
 }
 void employee_delete(Employee* this)
 {

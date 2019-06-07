@@ -22,36 +22,31 @@
 
 int main()
 {
-    //int option = 0;
-    /*
-    do{
+    //int option;
+    //Employee* pAuxEmp;
+    LinkedList* listaEmpleados = ll_newLinkedList();
+    LinkedList* listaEmpleado = ll_newLinkedList();
+    //char nombreA[4096];
+    //int idA;
+    //int horasA;
+    //int sueldoA;
+    /*do{
+
         switch(option)
         {
             case 1:
                 controller_loadFromText("data.csv",listaEmpleados);
                 break;
         }
-    }while(option != 10);*/
-    Employee* pAuxEmp;
-    LinkedList* listaEmpleados = ll_newLinkedList();
-    char nombreA[4096];
-    int idA;
-    int horasA;
-    int sueldoA;
+    }while(option != 10);
+    controller_removeEmployee(listaEmpleados);
+    controller_ListEmployee(listaEmpleados);*/
     FILE* pFile = fopen("data.csv","r");
     parser_EmployeeFromText(pFile,listaEmpleados);
-    for(int i=0;i<ll_len(listaEmpleados);i++)
-    {
-        pAuxEmp = ll_get(listaEmpleados,i);
-        if(pAuxEmp != NULL)
-        {
-            employee_getId(pAuxEmp,&idA);
-            employee_getNombre(pAuxEmp,nombreA);
-            employee_getHorasTrabajadas(pAuxEmp,&horasA);
-            employee_getSueldo(pAuxEmp,&sueldoA);
+    controller_saveAsBinary("data.bin",listaEmpleado);
+    controller_loadFromBinary("data.bin",listaEmpleado);
+    controller_ListEmployee(listaEmpleado);
+    printf("%d",ll_len(listaEmpleado));
 
-            printf("Id: %d Nombre: %s Horas Trabajadas: %d Sueldo: %d\n",idA,nombreA,horasA,sueldoA);
-        }
-    }
     return 0;
 }

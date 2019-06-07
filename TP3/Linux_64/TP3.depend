@@ -106,20 +106,22 @@
 
 1533133022 /home/alumno/MatiasMoll/TP3/Linux_64/parser.h
 
-1559693132 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Controller.c
+1559868630 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Controller.c
 	<stdio.h>
+	<string.h>
 	<stdlib.h>
+	"Get.h"
 	"LinkedList.h"
 	"Employee.h"
 	"parser.h"
 
 1559685563 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/LinkedList.h
 
-1559689582 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Employee.h
+1559868630 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Employee.h
 
 1533133022 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/parser.h
 
-1559696384 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Employee.c
+1559868630 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Employee.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -127,11 +129,11 @@
 	"Get.h"
 	"Validaciones.h"
 
-1558646948 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Get.h
+1559863591 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Get.h
 
 1558653938 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Validaciones.h
 
-1559696892 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/main.c
+1559868323 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/main.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -139,7 +141,7 @@
 	"Employee.h"
 	"parser.h"
 
-1533133022 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Controller.h
+1559865031 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Controller.h
 
 1559696656 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/parser.c
 	<stdio.h>
@@ -152,4 +154,10 @@
 	<stdlib.h>
 	<string.h>
 	<ctype.h>
+
+1559864975 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Get.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Validaciones.h"
 

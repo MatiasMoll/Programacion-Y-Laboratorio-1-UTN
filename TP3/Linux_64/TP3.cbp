@@ -43,6 +43,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Employee.h" />
+		<Unit filename="Get.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Get.h" />
 		<Unit filename="LinkedList.h" />
 		<Unit filename="Validaciones.c">
 			<Option compilerVar="CC" />

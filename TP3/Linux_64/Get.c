@@ -76,18 +76,18 @@ int GET_Name(char* msg, char* msgError, int minimo, int maximo, int reintentos, 
     return retorno;
 }
 
-int GET_Edad(char* msg, char* msgError, int minimo, int maximo, int reintentos, char* resultado)
+int GET_Edad(char* msg, char* msgError, int minimo, int maximo, int reintentos, int* resultado)
 {
     int retorno = -1;
     char buffer[maximo];
     if(msg != NULL && msgError != NULL && minimo<maximo && reintentos>=0 && resultado != NULL)
     {
         do{
-            if(GET_String(msg,msgError,1,3,reintentos,buffer))
+            if(GET_String(msg,msgError,1,100,reintentos,buffer))
             {
                 if(VAL_Edad(buffer, minimo, maximo))
                 {
-                    printf("%s", buffer);
+                    *resultado=atoi(buffer);
                     retorno  = 0;
                     break;
                 }else
