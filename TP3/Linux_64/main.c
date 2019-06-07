@@ -43,10 +43,10 @@ int main()
     controller_ListEmployee(listaEmpleados);*/
     FILE* pFile = fopen("data.csv","r");
     parser_EmployeeFromText(pFile,listaEmpleados);
-    controller_saveAsBinary("data.bin",listaEmpleado);
+    controller_saveAsBinary("data.bin",listaEmpleados);
     controller_loadFromBinary("data.bin",listaEmpleado);
     controller_ListEmployee(listaEmpleado);
-    printf("%d",ll_len(listaEmpleado));
+
 
     return 0;
 }

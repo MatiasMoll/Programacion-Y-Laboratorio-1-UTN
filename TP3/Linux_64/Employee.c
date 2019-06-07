@@ -41,7 +41,6 @@ Employee* employee_newFileBinario(Employee empleado)
             ||employee_setHorasTrabajadas(pAux,empleado.horasTrabajadas)||employee_setSueldo(pAux,empleado.sueldo))
         {
             employee_delete(pAux);
-            printf("%d,%s,%d,%d\n",empleado.id,empleado.nombre,empleado.horasTrabajadas,empleado.sueldo);
         }else
             {
                 retorno = pAux;

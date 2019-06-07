@@ -348,6 +348,8 @@ int controller_saveAsBinary(char* path, LinkedList* pArrayListEmployee)
                 fwrite(pAux,sizeof(Employee),1,pFile);
                 retorno = 0;
             }
+            printf("\n%d\n",i);
+
         }
     }
     return retorno;
