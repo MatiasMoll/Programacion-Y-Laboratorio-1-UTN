@@ -22,31 +22,31 @@ int VAL_Name(char* cadena)
 int VAL_Float(float cadena, float minimo, float maximo)
 {
     int retorno = 0;
-    //float aux;
+    float aux;
     //if(cadena != NULL)
     //{
-    //aux = atof(cadena);
-    if(cadena>=minimo && cadena<=maximo)
-    {
-        retorno = 1;
-    }
+    //    aux = atof(cadena);
+        if(cadena>=minimo && cadena<=maximo)
+        {
+            retorno = 1;
+        }
     //}
     return retorno;
 }
 
-int VAL_Int(int cadena, int minimo, int maximo)
+int VAL_Int(char* cadena, int minimo, int maximo)
 {
     int retorno = 0;
-    //int aux=0;
-    //if(cadena!= NULL && minimo<=maximo)
-    //{
-    //aux = atoi(cadena);
-    if(cadena <=maximo && cadena>=minimo)
+    int aux=0;
+    if(cadena!= NULL && minimo<=maximo)
     {
-        retorno = 1;
-    }
+        aux = atoi(cadena);
+        if(aux <=maximo && aux>=minimo)
+        {
+            retorno = 1;
+        }
 
-    //}
+    }
     return retorno;
 }
 

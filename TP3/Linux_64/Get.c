@@ -32,22 +32,22 @@ int GET_String(char* msg, char* msgError, int minimo, int maximo, int reintentos
 }
 //----------------------------------------------------------------------------------------------------------------------------
 
-int GET_Int(char* msg, char* msgError, int minimo, int maximo, int reintentos, char* resultado)
+int GET_Int(char* msg, char* msgError,int minSize, int maxSize, int minimo, int maximo, int reintentos, char* resultado)
 {
     int retorno = -1;
-    char buffer[4096];
+    char buffer[maxSize+1];
     if(msg != NULL && msgError != NULL && minimo<=maximo && reintentos>=0&&resultado!=NULL)
     {
-        if(GET_String(msg,msgError,minimo,maximo,reintentos,buffer))
+        if(GET_String(msg,msgError,minSize,maxSize,reintentos,buffer))
         {
-            if(VAL_Int(*buffer, minimo, maximo))
+            if(VAL_Int(buffer, minimo, maximo))
             {
-                resultado = buffer;
-                retorno = 1;
+                strncpy(resultado,buffer,maxSize);
+                retorno = 0;
             }
         }else
             {
-                printf(msgError);
+                printf("%s",msgError);
             }
     }
     return retorno;
@@ -55,15 +55,17 @@ int GET_Int(char* msg, char* msgError, int minimo, int maximo, int reintentos, c
 int GET_Name(char* msg, char* msgError, int minimo, int maximo, int reintentos, char* resultado)
 {
     int retorno = -1;
-    char buffer[maximo];
+    char buffer[4096];
     if(msg != NULL && msgError != NULL && minimo<maximo && reintentos>=0 && resultado != NULL)
     {
+        do{
         if(GET_String(msg,msgError,minimo,maximo,reintentos,buffer))
         {
             if(VAL_Name(buffer))
             {
                 strncpy(resultado,buffer,maximo);
                 retorno  = 0;
+                break;
             }else
                 {
                     printf("%s", msgError);
@@ -72,6 +74,7 @@ int GET_Name(char* msg, char* msgError, int minimo, int maximo, int reintentos, 
             {
                 printf("%s", msgError);
             }
+        }while(reintentos--);
     }
     return retorno;
 }
@@ -79,15 +82,17 @@ int GET_Name(char* msg, char* msgError, int minimo, int maximo, int reintentos, 
 int GET_Edad(char* msg, char* msgError, int minimo, int maximo, int reintentos, int* resultado)
 {
     int retorno = -1;
-    char buffer[maximo];
+    char buffer[4096];
+    int bufferInt;
     if(msg != NULL && msgError != NULL && minimo<maximo && reintentos>=0 && resultado != NULL)
     {
         do{
-            if(GET_String(msg,msgError,1,100,reintentos,buffer))
+            if(GET_String(msg,msgError,1,4096,reintentos,buffer))
             {
                 if(VAL_Edad(buffer, minimo, maximo))
                 {
-                    *resultado=atoi(buffer);
+                    bufferInt = atoi(buffer);
+                    *resultado=bufferInt;
                     retorno  = 0;
                     break;
                 }else

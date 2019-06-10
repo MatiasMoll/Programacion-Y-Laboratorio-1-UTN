@@ -6,7 +6,7 @@
 #include "Employee.h"
 #include "parser.h"
 #define MIN_CHAR_NAME 5
-#define MAX_CHAR_NAME 15
+#define MAX_CHAR_NAME 20
 #define REINTENTOS 2
 #define MIN_SUELDO 10000
 #define MAX_SUELDO 100000
@@ -15,7 +15,7 @@
 ///----------------------------------------------------------------------------------------------------------------------------
 int findMaxId(LinkedList* pArrayListEmployee)
 {
-    int idMax=-1;
+    int idMax=0;
     int idAux;
     Employee* pAux;
     for(int i=0; i<ll_len(pArrayListEmployee); i++)
@@ -162,18 +162,18 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
     int retorno = -1;
     Employee* pAux;
-    char nombreAux[4096];
-    int idMax=1;
+    char nombreAux[MAX_CHAR_NAME];
+    int idMax = 1;
     char idMaxAux[12];
     char horasAux[12];
     char sueldoAux[12];
     if(pArrayListEmployee != NULL)
     {
-        if(!GET_Name("Ingrese nombre del empleado: ","Nombre Invalido",MIN_CHAR_NAME,MAX_CHAR_NAME,REINTENTOS,nombreAux) &&
-                !GET_Int("Ingrese las horas que trabajo el empleado: ","Numero Invalido",MIN_HOUR,MAX_HOUR,REINTENTOS,horasAux)&&
-                !GET_Int("Ingrese el sueldo del empleado: ","Sueldo Invalido",MIN_SUELDO,MAX_SUELDO,REINTENTOS,sueldoAux))
+        if(!GET_Name("Ingrese nombre del empleado: ","\nNombre Invalido\n",MIN_CHAR_NAME,MAX_CHAR_NAME,REINTENTOS,nombreAux) &&
+                !GET_Int("Ingrese las horas que trabajo el empleado: ","\nNumero Invalido\n",1,5,MIN_HOUR,MAX_HOUR,REINTENTOS,horasAux)&&
+                !GET_Int("Ingrese el sueldo del empleado: ","\nSueldo Invalido\n",3,6,MIN_SUELDO,MAX_SUELDO,REINTENTOS,sueldoAux))
         {
-            idMax+=findMaxId(pArrayListEmployee);
+            idMax = idMax + findMaxId(pArrayListEmployee);
             sprintf(idMaxAux,"%d",idMax);
             pAux = employee_newParametros(idMaxAux,nombreAux,horasAux,sueldoAux);
             if(pAux != NULL)
@@ -211,7 +211,6 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
         idMax+=findMaxId(pArrayListEmployee);
         if(!GET_Edad("Ingrese el ID del empleado a modificar: ","ID Invalido.\n",0,idMax,REINTENTOS,&idAux))
         {
-            printf("%d",idAux);
             posId = findId(pArrayListEmployee,idAux);
             if(posId != -1)
             {
@@ -348,7 +347,7 @@ int controller_saveAsBinary(char* path, LinkedList* pArrayListEmployee)
                 fwrite(pAux,sizeof(Employee),1,pFile);
                 retorno = 0;
             }
-            printf("\n%d\n",i);
+
 
         }
     }

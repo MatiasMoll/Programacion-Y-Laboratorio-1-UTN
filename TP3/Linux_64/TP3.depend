@@ -161,3 +161,59 @@
 	<string.h>
 	"Validaciones.h"
 
+1560186544 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Controller.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"Get.h"
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+
+1560184495 /home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Get.h
+
+1559913883 /home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/LinkedList.h
+
+1559913883 /home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Employee.h
+
+1559913883 /home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/parser.h
+
+1560186495 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Employee.h"
+	"Get.h"
+	"Validaciones.h"
+
+1560184529 /home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Validaciones.h
+
+1560186218 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Get.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Validaciones.h"
+
+1560203267 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Get.h"
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"parser.h"
+
+1559913883 /home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Controller.h
+
+1559913883 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1560185756 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+

@@ -97,7 +97,7 @@ int employee_getNombre(Employee* this,char* nombre)
 int employee_setHorasTrabajadas(Employee* this,int horasTrabajadas)
 {
     int retorno = -1;
-    if(this != NULL && VAL_Int(horasTrabajadas,0,1000))
+    if(this != NULL )//&& VAL_Int(horasTrabajadas,0,1000))
     {
         this->horasTrabajadas = horasTrabajadas;
         retorno = 0;
@@ -118,7 +118,7 @@ int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas)
 int employee_setSueldo(Employee* this,int sueldo)
 {
     int retorno = -1;
-    if(this != NULL && VAL_Int(sueldo,MIN_SUELDO,MAX_SUELDO))
+    if(this != NULL )//&& VAL_Int(sueldo,MIN_SUELDO,MAX_SUELDO))
     {
         this->sueldo = sueldo;
         retorno = 0;
