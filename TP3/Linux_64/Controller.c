@@ -126,27 +126,13 @@ int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
 {
     int retorno = -1;
     FILE* pFile = NULL;
-    Employee aux;
-    Employee* empleado;
     if(path != NULL && pArrayListEmployee != NULL)
     {
         pFile = fopen(path, "r");
-        if(pFile != NULL)
+        if(pFile != NULL && !parser_EmployeeFromBinary(pFile,pArrayListEmployee))
         {
-            while(!feof(pFile))
-            {
-                fread(&aux,sizeof(Employee),1,pFile);
-                empleado = employee_newFileBinario(aux);
-                if(empleado != NULL)
-                {
-                    ll_add(pArrayListEmployee,empleado);
-                }else
-                    {
-                        employee_delete(empleado);
-                    }
-            }
+            retorno = 0;
         }
-        fclose(pFile);
     }
     return retorno;
 }
@@ -320,7 +306,37 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_saveAsText(char* path, LinkedList* pArrayListEmployee)
 {
-    return 1;
+    int retorno = -1;
+    int i;
+    char nombre[MAX_CHAR_NAME];
+    int id;
+    int horas;
+    int sueldo;
+    FILE* pFileAux;
+    Employee* pEmpAux;
+    if(path!= NULL && pArrayListEmployee != NULL)
+    {
+        pFileAux = fopen(path,"w");
+        if(pFileAux != NULL)
+        {
+            for(i=0;i<ll_len(pArrayListEmployee);i++)
+            {
+                pEmpAux = ll_get(pArrayListEmployee,i);
+                if(pEmpAux != NULL && !employee_getId(pEmpAux,&id) && !employee_getNombre(pEmpAux,nombre)&&
+                    !employee_getHorasTrabajadas(pEmpAux,&horas)&&!employee_getSueldo(pEmpAux,&sueldo))
+                {
+
+                    fprintf(pFileAux,"%d,%s,%d,%d\n",id,nombre,horas,sueldo);
+                }else
+                    {
+                        employee_delete(pEmpAux);
+                    }
+            }
+            retorno = 0;
+            fclose(pFileAux);
+        }
+    }
+    return retorno;
 }
 
 /** \brief Guarda los datos de los empleados en el archivo data.csv (modo binario).

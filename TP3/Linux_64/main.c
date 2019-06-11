@@ -129,7 +129,7 @@ int main()
             case 9:
                 if(flag)
                 {
-                    if(!controller_saveAsBinary("data2Bkp.csv",listaEmpleados))
+                    if(!controller_saveAsBinary("dataBkp.csv",listaEmpleados))
                     {
                         printf("Cambio guardados exitosamente");
                         flag = 2;

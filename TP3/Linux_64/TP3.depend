@@ -161,7 +161,7 @@
 	<string.h>
 	"Validaciones.h"
 
-1560186544 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Controller.c
+1560267033 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Controller.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -194,7 +194,7 @@
 	<string.h>
 	"Validaciones.h"
 
-1560203267 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/main.c
+1560267033 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/main.c
 	<stdio.h>
 	<stdlib.h>
 	"Get.h"
@@ -205,7 +205,7 @@
 
 1559913883 /home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Controller.h
 
-1559913883 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/parser.c
+1560267033 source:/home/matias/Escritorio/Matias/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"

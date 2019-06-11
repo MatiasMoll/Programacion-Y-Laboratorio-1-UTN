@@ -10,7 +10,7 @@
  * \return int
  *
  */
-int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
+int parser_EmployeeFromText(FILE* pFile, LinkedList* pArrayListEmployee)
 {
     int retorno = -1;
     char bufferId[4096];
@@ -42,8 +42,29 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
  * \return int
  *
  */
-int parser_EmployeeFromBinary(FILE* pFile , LinkedList* pArrayListEmployee)
+int parser_EmployeeFromBinary(FILE* pFile, LinkedList* pArrayListEmployee)
 {
+    int retorno = -1;
+    Employee aux;
+    Employee* empleado;
+    if(pFile != NULL && pArrayListEmployee != NULL)
+    {
+        while(!feof(pFile))
+        {
 
-    return 1;
+            empleado = employee_newFileBinario(aux);
+            fread(&aux,sizeof(Employee),1,pFile);
+            if(empleado != NULL)
+            {
+                ll_add(pArrayListEmployee,empleado);
+            }
+            else
+            {
+                employee_delete(empleado);
+            }
+        }
+        retorno = 0;
+    }
+    fclose(pFile);
+    return retorno;
 }
