@@ -25,7 +25,6 @@ int main()
 {
     int option;
     LinkedList* listaEmpleados = ll_newLinkedList();
-    //LinkedList* listaEmpleado = ll_newLinkedList();
     int flag=0;
     char salir;
 
@@ -159,13 +158,5 @@ int main()
                 break;
         }
     }while(option != 10);
-    /*controller_removeEmployee(listaEmpleados);
-    controller_ListEmployee(listaEmpleados);
-    FILE* pFile = fopen("data.csv","r");
-    parser_EmployeeFromText(pFile,listaEmpleados);
-    controller_loadFromText("data.csv",listaEmpleados);
-    controller_ListEmployee(listaEmpleados);
-    controller_saveAsBinary("dataBkp.csv",listaEmpleados);
-    controller_loadFromBinary("dataBkp.csv",listaEmpleado);*/
     return 0;
 }
