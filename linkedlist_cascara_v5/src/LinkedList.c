@@ -441,7 +441,6 @@ int ll_containsAll(LinkedList* this,LinkedList* this2)
 LinkedList* ll_subList(LinkedList* this,int from,int to)
 {
     LinkedList* cloneArray = NULL;
-    void* auxElemento;
     if(this != NULL && from >= 0 && from < ll_len(this) && to>from && to <= ll_len(this))
     {
         cloneArray = ll_newLinkedList();
@@ -482,14 +481,28 @@ LinkedList* ll_clone(LinkedList* this)
 int ll_sort(LinkedList* this, int (*pFunc)(void*,void*), int order)
 {
     int returnAux =-1;
+    int flag;
     void* auxElement;
+    void* auxElementTwo;
+    void* auxElementSwap;
     if(this != NULL && pFunc != NULL && (order == 0 || order == 1))
     {
-      for(int i=0;i<ll_len(this);i++)
-      {
-        if()
-
-      }
+      do{
+            flag = 1;
+            for(int i=0;i<ll_len(this)-1;i++)
+            {
+                auxElement = ll_get(this,i);
+                auxElement = ll_get(this,i+1);
+                if((pFunc(auxElement,auxElementTwo)>0 && !order)||
+                   (pFunc(auxElement,auxElementTwo)<0 && order))
+                {
+                    auxElementSwap = auxElement;
+                    auxElement  = auxElementTwo;
+                    auxElementTwo = auxElementSwap;
+                    flag = 0;
+                }
+            }
+      }while(!flag);
 
     }
     return returnAux;
