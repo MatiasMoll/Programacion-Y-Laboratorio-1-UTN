@@ -27,4 +27,8 @@ int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
 int employee_setSueldo(Employee* this,int sueldo);
 int employee_getSueldo(Employee* this,int* sueldo);
 
+int em_calcularSueldo(void* p);
+int filtroHorasMayor240(void* p);
+int filtroSueldo20k(void* p);
+
 #endif // employee_H_INCLUDED

@@ -135,3 +135,61 @@ int employee_getSueldo(Employee* this,int* sueldo)
     }
     return retorno;
 }
+
+int em_calcularSueldo(void* p)
+{
+    int sueldo;
+    int horasTrabajadas;
+    if(p != NULL)
+    {
+
+        employee_getHorasTrabajadas(p,&horasTrabajadas);
+        if(horasTrabajadas<=120)
+        {
+            sueldo = horasTrabajadas * 180;
+        }else if(horasTrabajadas<=160)
+            {
+                sueldo = (120 * 180) + (horasTrabajadas - 120) * 240;
+            }else if(horasTrabajadas<=240)
+                {
+                    sueldo = (120 * 180) + (40 * 240) + (horasTrabajadas - 160) * 350;
+                }else
+                    {
+                        sueldo = (120 * 180) + (40 * 240 ) + (80 * 350)+(horasTrabajadas - 240) * 400;
+                    }
+
+       employee_setSueldo(p,sueldo);
+    }
+    return 1;
+}
+
+int filtroHorasMayor240(void* p)
+{
+    int retorno = 0;
+    int horas;
+    if(p != NULL)
+    {
+        employee_getHorasTrabajadas((Employee*)p,&horas);
+        if(horas>=240)
+        {
+            retorno = 1;
+        }
+
+    }
+    return retorno;
+}
+int filtroSueldo20k(void* p)
+{
+    int retorno = 0;
+    int sueldo;
+    if(p!=NULL)
+    {
+        employee_getSueldo((Employee*)p,&sueldo);
+        if(sueldo>=20000)
+        {
+            retorno = 1;
+        }
+
+    }
+    return retorno;
+}

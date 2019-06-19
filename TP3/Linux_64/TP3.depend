@@ -106,7 +106,7 @@
 
 1533133022 /home/alumno/MatiasMoll/TP3/Linux_64/parser.h
 
-1559869190 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Controller.c
+1560893114 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Controller.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -115,13 +115,13 @@
 	"Employee.h"
 	"parser.h"
 
-1559685563 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/LinkedList.h
+1560896237 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/LinkedList.h
 
-1559868630 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Employee.h
+1560905721 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Employee.h
 
-1533133022 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/parser.h
+1560893114 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/parser.h
 
-1559868892 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Employee.c
+1560906328 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Employee.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -129,33 +129,34 @@
 	"Get.h"
 	"Validaciones.h"
 
-1559863591 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Get.h
+1560893114 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Get.h
 
-1558653938 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Validaciones.h
+1560893114 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Validaciones.h
 
-1559869030 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/main.c
+1560905834 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/main.c
 	<stdio.h>
 	<stdlib.h>
+	"Get.h"
 	"LinkedList.h"
 	"Controller.h"
 	"Employee.h"
 	"parser.h"
 
-1559865031 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Controller.h
+1560893114 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Controller.h
 
-1559696656 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/parser.c
+1560893114 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
 
-1558654221 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Validaciones.c
+1560893114 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Validaciones.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<ctype.h>
 
-1559864975 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Get.c
+1560893114 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/Get.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -216,4 +217,10 @@
 	<stdlib.h>
 	<string.h>
 	<ctype.h>
+
+1560906451 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/TP3/Linux_64/LinkedList.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
 

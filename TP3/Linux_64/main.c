@@ -25,6 +25,7 @@ int main()
 {
     int option;
     LinkedList* listaEmpleados = ll_newLinkedList();
+    LinkedList* empleadosTrabajadores;
     int flag=0;
     char salir;
 
@@ -32,7 +33,7 @@ int main()
 
         GET_Edad("\n1)Cargar datos desde el .csv\n2)Cargar datos desde el .bin\n3)Alta de Empleado\n4)Modificar datos del empleado\n"
                 "5)Baja de empleado\n6)Listar empleado\n7)Ordenar empleados\n8)Guardar datos en archivos de texto\n9)Guardar datos en modo binario\n"
-                "10)Salir\nIngrese la opcion deseada: ","\nOpcion Incorrecta\n",0,11,REINTENTOS,&option);
+                "10)Recalcular sueldos\n11)SuperTrabajadores\n12)Empleados que son pobres\n13)Salir\nIngrese la opcion deseada: ","\nOpcion Incorrecta\n",0,13,REINTENTOS,&option);
         system("clear");
         switch(option)
         {
@@ -142,6 +143,19 @@ int main()
                     }
                break;
             case 10:
+                ll_map(listaEmpleados,em_calcularSueldo);
+                controller_saveAsText("sueldos.csv",listaEmpleados);
+                break;
+            case 11:
+                empleadosTrabajadores = ll_filter(listaEmpleados,filtroHorasMayor240);
+                controller_saveAsText("TrabajadoresIncansables.csv",empleadosTrabajadores);
+                break;
+            case 12:
+                ll_reduce(listaEmpleados,filtroSueldo20k);
+                controller_saveAsText("TrabajadoresPobres.csv",listaEmpleados);
+                break;
+
+            case 13:
                 if(flag == 1)
                 {
                     GET_Name("\nHay cambios sin guardar, desea salir igualmente?(S/N)\n","Opcion invalida",1,2,REINTENTOS,&salir);
@@ -157,6 +171,6 @@ int main()
                 }
                 break;
         }
-    }while(option != 10);
+    }while(option != 13);
     return 0;
 }

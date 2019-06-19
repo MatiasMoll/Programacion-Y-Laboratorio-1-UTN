@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1560899521 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/EjercicioPre2doParcialV2/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Empleado.h"
+	"LinkedList.h"
+	"Parser.h"
+
+1529542728 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/EjercicioPre2doParcialV2/Empleado.h
+
+1560896237 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/EjercicioPre2doParcialV2/LinkedList.h
+
+1560899491 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/EjercicioPre2doParcialV2/Parser.h
+	"LinkedList.h"
+
+1560900735 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/EjercicioPre2doParcialV2/Empleado.c
+	"Empleado.h"
+	<stdio.h>
+	<stdlib.h>
+
