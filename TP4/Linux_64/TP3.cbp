@@ -43,6 +43,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Get.h" />
+		<Unit filename="LinkedList.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="LinkedList.h" />
 		<Unit filename="Validaciones.c">
 			<Option compilerVar="CC" />
