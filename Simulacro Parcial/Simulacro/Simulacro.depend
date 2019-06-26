@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1561501211 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Simulacro Parcial/Simulacro/LinkedList.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1561497979 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Simulacro Parcial/Simulacro/LinkedList.h
+
+1561504405 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Simulacro Parcial/Simulacro/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Entregas.h"
+	"Validaciones.h"
+	"LinkedList.h"
+	"Controller.h"
+
+1561499807 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Simulacro Parcial/Simulacro/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Entregas.h"
+
+1561499989 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Simulacro Parcial/Simulacro/Entregas.h
+
+1561506384 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Simulacro Parcial/Simulacro/Controller.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Entregas.h"
+	"parser.h"
+
+1561501502 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Simulacro Parcial/Simulacro/parser.h
+
+1561506281 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Simulacro Parcial/Simulacro/Entregas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Entregas.h"
+	"Validaciones.h"
+
+1561499683 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Simulacro Parcial/Simulacro/Validaciones.h
+
+1561501981 source:/home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Simulacro Parcial/Simulacro/Validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1561504802 /home/alumno/MatiasMoll/Programacion-Y-Laboratorio-1-UTN/Simulacro Parcial/Simulacro/Controller.h
+
